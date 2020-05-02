@@ -20,7 +20,7 @@
     vertical-align: middle;
 }
 
-.button {
+.button-join {
   border: 2px solid #C1272D;
   background-color: white;
   color: #C1272D;
@@ -33,7 +33,7 @@
   margin-bottom: 30px;
 }
 
-.button:focus{
+.button-join:focus{
     background-color: white !important;
 }
 
@@ -58,4 +58,55 @@
 
 .transparent {
     box-shadow:none !important;
+}
+
+#our-jobs {
+    border: 2px solid #C1272D;
+    background-color: white;
+    color: #C1272D;
+    padding: 0px 10px;
+    font-size: 30px;
+    font-family: 'Bebas Neue';
+    border-color: #f44336;
+    margin-bottom: 30px;
+}
+
+.wrap {
+  display: flex;
+}
+
+.wrap1 {
+
+}
+
+.wrap2 {
+    margin-left: auto;
+}
+
+#tombol-tambah {
+    border: 2px solid #22B573;
+    background-color: white;
+    color: #22B573;
+    padding: 0px 15px;
+    border-color: #22B573;
+    font-family: 'Fira Sans';
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card {
+    border-radius: 10% !important;
+}
+
+.button-take {
+  background-color:#C1272D;
+  color: white;
+  padding: 5px 30px;
+  font-size: 15px;
+  font-family: 'Fira Sans';
+  cursor: pointer;
+  border-radius: 50px;
+  text-align: center;
 }
