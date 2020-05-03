@@ -52,7 +52,7 @@
     font-size: 20px;
 }
 
-.bg-atas {
+.bg-hijau {
     background: rgba(57, 181, 74, 0.5)
 }
 
@@ -68,11 +68,12 @@
     font-size: 30px;
     font-family: 'Bebas Neue';
     border-color: #f44336;
-    margin-bottom: 30px;
 }
 
 .wrap {
   display: flex;
+  justify-content: space-between;
+  margin: 0px 30px;
 }
 
 .wrap1 {
@@ -109,4 +110,35 @@
   cursor: pointer;
   border-radius: 50px;
   text-align: center;
+}
+
+.scroll {
+    overflow-x: auto;
+}
+
+.pagination {
+    text-align: center;
+    background-color: #C1272D !important;
+    display: inline-block !important;
+    color: white !important;
+    border-radius: 15px !important;
+}
+
+.active {
+    color: #22B573;
+}
+
+table, th ,td {
+    background: rgba(119, 192, 67, 0.3) !important;
+    border: 1px solid #009245 !important;
+}
+
+table {
+    border-collapse:separate;
+    border-radius: 5px;
+    width: 70%;
+}
+
+td {
+    padding: 7px;
 }
