@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/register.css" />
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <title>Register - Laz Guild</title>
+    </head>
+
+    <body class="bg-hijau">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <h4>Register</h4>
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="input-field">
+                                    <input value="Lazuardy Khatulistiwa" id="first_name" type="text" class="validate">
+                                    <label for="first_name">Full Name</label>
+                                </div>
+                                <div class="input-field">
+                                    <input value="31682813071571257" id="first_name" type="text" class="validate">
+                                    <label for="first_name">NIK</label>
+                                </div>
+                                <p>
+                                    <span style="color: black;">Member Type: </span>
+                                    <label>
+                                    <input name="group1" type="radio" checked />
+                                    <span>Civilian</span>
+                                    </label>
+                                    <label>
+                                        <input name="group1" type="radio" />
+                                        <span>Guild Member</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <span style="color: black;">Join Period: </span>
+                                    <label>
+                                    <input name="group2" type="radio" checked />
+                                    <span>1-month</span>
+                                    </label>
+                                    <label>
+                                        <input name="group2" type="radio" />
+                                        <span>3-months</span>
+                                    </label>
+                                    <label>
+                                        <input name="group2" type="radio" />
+                                        <span>Half year</span>
+                                    </label>
+                                    <label>
+                                        <input name="group2" type="radio" />
+                                        <span>Year</span>
+                                    </label>
+                                </p>
+                                <div class="input-field">
+                                    <input value="Student" id="first_name" type="text" class="validate">
+                                    <label for="first_name">Profession</label>
+                                </div>
+                                <div class="input-field">
+                                    <textarea id="textarea1" class="materialize-textarea">Web Programming</textarea>
+                                    <label for="textarea1">Skillset</label>
+                                </div>
+                                <div class="input-field">
+                                    <input value="Duren Sawit 123" id="first_name" type="text" class="validate">
+                                    <label for="first_name">Address</label>
+                                </div>
+                                <div class="input-field">
+                                    <input value="18-10-2000" type="text" class="datepicker">
+                                    <label for="first_name">Birthdate</label>
+                                </div>
+                                <div class="input-field">
+                                    <input value="lazuardykhat123" id="first_name" type="text" class="validate">
+                                    <label for="first_name">Code Name</label>
+                                </div>
+                                <a class="waves-effect waves-light btn">Register</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.datepicker');
+        var instances = M.Datepicker.init(elems, {});
+        });
+      </script>
+    </body>
+  </html>
