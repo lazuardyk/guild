@@ -1,0 +1,82 @@
+@font-face {
+    font-family: "Bebas Neue";
+    src: url(../fonts/BebasNeue-Regular.ttf);
+    }
+
+@font-face {
+    font-family: "Fira Sans";
+    src: url(../fonts/FiraSans-Regular.ttf);
+    }
+
+.vertical-align {
+    vertical-align: middle;
+}
+
+.font-bebas {
+    font-family: 'Bebas Neue';
+    color: #C1272D;
+}
+
+.font-fira {
+    font-family: 'Fira Sans';
+}
+
+html, body, .container {
+    height: 100%;
+}
+
+.bg-hijau {
+    background: rgba(57, 181, 74, 0.5) !important;
+}
+
+.tombol-fb {
+    border: solid 2px blue;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    font-family: 'Fira Sans';
+    background-color: white;
+    cursor: pointer;
+}
+
+.tombol-tw {
+    border: solid 2px skyblue;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    font-family: 'Fira Sans';
+    background-color: white;
+    cursor: pointer;
+}
+
+.tombol-gg {
+    border: solid 2px red;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    font-family: 'Fira Sans';
+    background-color: white;
+    cursor: pointer;
+}
+
+.tombol-gt {
+    border: solid 2px black;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    font-family: 'Fira Sans';
+    background-color: white;
+    cursor: pointer;
+}
+
+.card {
+    border-radius: 10px;
+}

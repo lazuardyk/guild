@@ -20,8 +20,8 @@
             <li><a href="#" class="text-nav">Home</a></li>
             <li><a href="#" class="text-nav">Jobs</a></li>
             <li><a href="#" class="text-nav">Top Members</a></li>
-            <li><a href="#" class="text-nav">Register</a></li>
-            <li><a href="#" class="text-nav">Login</a></li>
+            <li><a href="sso.html" class="text-nav">Register</a></li>
+            <li><a href="login.html" class="text-nav">Login</a></li>
             </ul>
         </div>
         </nav>
@@ -200,15 +200,17 @@
     <div class="bg-hijau">
       <div class="wrap font-fira">
         <span style="font-size: 20px;" class="valign-wrapper">Copyright © Laz Guild 2020</span>
-        <span style="font-size: 20px;">Follow us<img src="images/icon-fb.png" class="vertical-align" width="20%"><img src="images/icon-tw.png" class="vertical-align" width="16%"> <img src="images/icon-ig.png" class="vertical-align" width="17%"></span>
+        <span style="font-size: 20px;">Follow us<a href="#"><img src="images/icon-fb.png" class="vertical-align" width="20%"></a><img src="images/icon-tw.png" class="vertical-align" width="16%"> <img src="images/icon-ig.png" class="vertical-align" width="17%"></span>
       </div>
     </div>
 
-
-
-
-
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems, options);
+      });
+    </script>
   </body>
 </html>
