@@ -1,3 +1,22 @@
+@font-face {
+    font-family: "Bebas Neue";
+    src: url(../fonts/BebasNeue-Regular.ttf);
+    }
+
+@font-face {
+    font-family: "Fira Sans";
+    src: url(../fonts/FiraSans-Regular.ttf);
+    }
+
 .bg-hijau {
     background: rgba(57, 181, 74, 0.5) !important;
+}
+
+.font-bebas {
+    font-family: 'Bebas Neue';
+    color: #C1272D;
+}
+
+.font-fira {
+    font-family: 'Fira Sans';
 }

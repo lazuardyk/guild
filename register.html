@@ -15,7 +15,19 @@
             <div class="container">
                 <div class="row">
                     <div class="col s12 center-align">
-                        <h4>Register</h4>
+                        <!-- Modal Structure -->
+                        <div id="modal1" class="modal">
+                            <div class="modal-content">
+                            <h4>Registration Successful</h4>
+                            <p>This is your data:</p>
+                            <p style="margin: 0px;">Username: <b>lazuardykhat123</b></p>
+                            <p style="margin: 0px;">Password: <b>A!jf(8723!</b></p>
+                            </div>
+                            <div class="modal-footer">
+                            <a href="login.html" class="modal-close waves-effect waves-green btn-flat">Login</a>
+                            </div>
+                        </div>
+                        <h4 class="font-fira" style="margin: 25px;">Registration Form</h4>
                         <div class="card">
                             <div class="card-content">
                                 <div class="input-field">
@@ -76,7 +88,7 @@
                                     <input value="lazuardykhat123" id="first_name" type="text" class="validate">
                                     <label for="first_name">Code Name</label>
                                 </div>
-                                <a class="waves-effect waves-light btn">Register</a>
+                                <a data-target="modal1" class="waves-effect waves-light btn modal-trigger">Register</a>
                             </div>
                         </div>
                     </div>
@@ -88,6 +100,9 @@
         document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.datepicker');
         var instances = M.Datepicker.init(elems, {});
+
+        var elems2 = document.querySelectorAll('.modal');
+        var instances2 = M.Modal.init(elems2, {});
         });
       </script>
     </body>
