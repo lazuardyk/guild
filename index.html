@@ -17,15 +17,15 @@
         <div class="nav-wrapper">
             <a href="#" class="brand-logo"><img src="images/logo.png" alt="Logo" width="70"><span>Laz Guild</span></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#" class="text-nav">Home</a></li>
-            <li><a href="#" class="text-nav">Jobs</a></li>
-            <li><a href="#" class="text-nav">Top Members</a></li>
+            <li><a href="#home" class="text-nav">Home</a></li>
+            <li><a href="#jobs" class="text-nav">Jobs</a></li>
+            <li><a href="#topmembers" class="text-nav">Top Members</a></li>
             <li><a href="sso.html" class="text-nav">Register</a></li>
             <li><a href="login.html" class="text-nav">Login</a></li>
             </ul>
         </div>
         </nav>
-        <div class="container">
+        <div class="container scrollspy" id="home">
             <div class="row">
                 <div class="col s12 center-align">
                     <img class="vertical-align" src="images/logo.png" alt="Logo" width="150">
@@ -41,18 +41,12 @@
     </div>
     <div class="container">
       <div class="row">
-        <!-- <div class="col s12">
-            <div class="wrap">
-              <div class="wrap1"><span id="our-jobs">Our Jobs</span></div>
-              <div class="wrap2"><span id="tombol-tambah">+</span></div>
-            </div>
-        </div> -->
         <div class="col s12 center-align" style="position:relative;">
             <span id="our-jobs">Our Jobs</span>
             <span id="tombol-tambah" style="position: absolute; right: 0;">+</span>
         </div>
       </div>
-      <div class="row scroll">
+      <div class="row scrollspy" id="jobs">
         <div class="col s12 m3">
           <div class="card green darken-2 z-depth-3">
             <div class="card-content white-text font-fira">
@@ -120,7 +114,7 @@
       <div class="row">
         <div class="col s12 center-align">
           <span id="our-jobs">Top Members</span>
-          <table class="centered" style="margin: auto; margin-top: 25px; margin-bottom: 15px;">
+          <table class="centered scrollspy" id="topmembers" style="margin: auto; margin-top: 25px; margin-bottom: 15px;">
             <thead>
               <tr>
                   <th>No</th>
@@ -138,58 +132,58 @@
                 <td>113892</td>
               </tr>
               <tr>
-                <td>1</td>
-                <td>royalknight</td>
+                <td>2</td>
+                <td>magina88</td>
                 <td>Platinum</td>
-                <td>113892</td>
+                <td>100234</td>
               </tr>
               <tr>
-                <td>1</td>
-                <td>royalknight</td>
-                <td>Platinum</td>
-                <td>113892</td>
+                <td>3</td>
+                <td>pewdiepie</td>
+                <td>Gold</td>
+                <td>97235</td>
               </tr>
               <tr>
-                <td>1</td>
-                <td>royalknight</td>
-                <td>Platinum</td>
-                <td>113892</td>
+                <td>4</td>
+                <td>cherryxd24</td>
+                <td>Gold</td>
+                <td>87457</td>
               </tr>
               <tr>
-                <td>1</td>
-                <td>royalknight</td>
-                <td>Platinum</td>
-                <td>113892</td>
+                <td>5</td>
+                <td>noobies212</td>
+                <td>Gold</td>
+                <td>85712</td>
               </tr>
               <tr>
-                <td>1</td>
-                <td>royalknight</td>
-                <td>Platinum</td>
-                <td>113892</td>
+                <td>6</td>
+                <td>exmachina</td>
+                <td>Silver</td>
+                <td>74877</td>
               </tr>
               <tr>
-                <td>1</td>
-                <td>royalknight</td>
-                <td>Platinum</td>
-                <td>113892</td>
+                <td>7</td>
+                <td>richnoobs</td>
+                <td>Silver</td>
+                <td>72038</td>
               </tr>
               <tr>
-                <td>1</td>
-                <td>royalknight</td>
-                <td>Platinum</td>
-                <td>113892</td>
+                <td>8</td>
+                <td>christoper7</td>
+                <td>Silver</td>
+                <td>70005</td>
               </tr>
               <tr>
-                <td>1</td>
-                <td>royalknight</td>
-                <td>Platinum</td>
-                <td>113892</td>
+                <td>9</td>
+                <td>zeeplyn123</td>
+                <td>Bronze</td>
+                <td>67329</td>
               </tr>
               <tr>
-                <td>1</td>
-                <td>royalknight</td>
-                <td>Platinum</td>
-                <td>113892</td>
+                <td>10</td>
+                <td>crazygamer12</td>
+                <td>Bronze</td>
+                <td>42715</td>
               </tr>
             </tbody>
           </table>
@@ -199,8 +193,8 @@
 
     <div class="bg-hijau">
       <div class="wrap font-fira">
-        <span style="font-size: 20px;" class="valign-wrapper">Copyright © Laz Guild 2020</span>
-        <span style="font-size: 20px;">Follow us<a href="#"><img src="images/icon-fb.png" class="vertical-align" width="20%"></a><img src="images/icon-tw.png" class="vertical-align" width="16%"> <img src="images/icon-ig.png" class="vertical-align" width="17%"></span>
+        <span class="valign-wrapper" style="margin-left: 20px;">Copyright © Laz Guild 2020</span>
+        <span>Follow us<a href="#"><img src="images/icon-fb.png" class="vertical-align" width="20%"></a><img src="images/icon-tw.png" class="vertical-align" width="16%"> <img src="images/icon-ig.png" class="vertical-align" width="17%"></span>
       </div>
     </div>
 
@@ -208,8 +202,8 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.modal');
-        var instances = M.Modal.init(elems, options);
+        var elems = document.querySelectorAll('.scrollspy');
+        var instances = M.ScrollSpy.init(elems, {});
       });
     </script>
   </body>
