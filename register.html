@@ -15,22 +15,23 @@
     <body class="bg-hijau">
             <div class="container">
                 <div class="row">
-                    <div class="col s12 center-align">
+                    <div class="col s12 m8 offset-m2">
                         <!-- Modal Structure -->
                         <div id="modal1" class="modal">
-                            <div class="modal-content">
+                            <div class="modal-content" style="text-align:center;">
                             <h4>Registration Successful</h4>
-                            <p>This is your data:</p>
+                            <p>Thank you for registering! This is your account information:</p>
                             <p style="margin: 0px;">Username: <b>lazuardykhat123</b></p>
                             <p style="margin: 0px;">Password: <b>A!jf(8723!</b></p>
                             </div>
-                            <div style="margin: auto; margin-bottom: 15px;">
+                            <div style="text-align:center; margin-bottom: 15px;">
                             <a href="login.html" class="modal-close waves-effect waves-green btn">Login</a>
                             </div>
                         </div>
-                        <h4 class="font-fira" style="margin: 25px 0px;">Registration Form</h4>
+                        <a href="#" class="brand-logo font-bebas" style="font-size: 40px;"><img src="images/logo.png" style="margin-right: -5px;" alt="Logo" width="100px"><span>Laz Guild</a>
                         <div class="card">
                             <div class="card-content">
+                                <p class="font-fira" style="text-align: center; margin-bottom: 25px; font-size:200%; color:#333533;">Registration Form</p>
                                 <div class="input-field">
                                     <input value="Lazuardy Khatulistiwa" id="full_name" type="text" class="validate">
                                     <label for="full_name">Full Name</label>
@@ -39,36 +40,20 @@
                                     <input value="31682813071571257" id="nik" type="number" class="validate">
                                     <label for="nik">NIK</label>
                                 </div>
-                                <p>
-                                    <span style="color: black;">Member Type: </span>
-                                    <label>
-                                    <input name="group1" type="radio" value="civilian" checked />
-                                    <span>Civilian</span>
-                                    </label>
-                                    <label>
-                                        <input name="group1" type="radio" value="member" />
-                                        <span>Guild Member</span>
-                                    </label>
-                                </p>
-                                <p>
-                                    <span style="color: black;">Join Period: </span>
-                                    <label>
-                                    <input name="group2" type="radio" value="1month" checked />
-                                    <span>1-month</span>
-                                    </label>
-                                    <label>
-                                        <input name="group2" value="3months" type="radio" />
-                                        <span>3-months</span>
-                                    </label>
-                                    <label>
-                                        <input name="group2" value="halfyear" type="radio" />
-                                        <span>Half year</span>
-                                    </label>
-                                    <label>
-                                        <input name="group2" value="year" type="radio" />
-                                        <span>Year</span>
-                                    </label>
-                                </p>
+                                <div style="margin-top: -10px; margin-bottom: 25px;">
+                                <label>Member Type</label>
+                                <select name="member-type" class="browser-default">
+                                    <option value="civilian" selected>Civilian</option>
+                                    <option value="member">Guild Member</option>
+                                </select>
+                                <label>Join Period</label>
+                                <select name="join-period" class="browser-default">
+                                    <option value="1" selected>1 Month</option>
+                                    <option value="3">3 Months</option>
+                                    <option value="6">6 Months</option>
+                                    <option value="12">12 Months</option>
+                                </select>
+                                </div>
                                 <div class="input-field">
                                     <input value="Student" id="profession" type="text" class="validate">
                                     <label for="profession">Profession</label>
@@ -89,7 +74,7 @@
                                     <input value="lazuardykhat123" id="codename" type="text" class="validate">
                                     <label for="codename">Code Name</label>
                                 </div>
-                                <a data-target="modal1" class="waves-effect waves-light btn modal-trigger">Register</a>
+                                <div style="text-align: center;"><a data-target="modal1" class="waves-effect waves-light btn modal-trigger">Register</a></div>
                             </div>
                         </div>
                     </div>

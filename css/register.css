@@ -1,3 +1,16 @@
 .bg-hijau {
     background: rgba(57, 181, 74, 0.5);
 }
+
+.card {
+    border-radius: 15px !important;
+}
+
+.brand-logo {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center;
+    font-family: 'Bebas Neue' !important;
+    color: #C1272D !important;
+    margin-bottom: 10px;
+  }
