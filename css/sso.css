@@ -1,13 +1,3 @@
-@font-face {
-    font-family: "Bebas Neue";
-    src: url(../fonts/BebasNeue-Regular.ttf);
-    }
-
-@font-face {
-    font-family: "Fira Sans";
-    src: url(../fonts/FiraSans-Regular.ttf);
-    }
-
 @media screen and (min-width: 600px) {
     .valign-wrapper2 {
         display: -webkit-box;
@@ -21,18 +11,6 @@
         }
 }
 
-.vertical-align {
-    vertical-align: middle;
-}
-
-.font-bebas {
-    font-family: 'Bebas Neue';
-    color: #C1272D;
-}
-
-.font-fira {
-    font-family: 'Fira Sans';
-}
 
 html, body, .container {
     height: 100%;
@@ -44,9 +22,9 @@ html, body, .container {
 
 .tombol-fb {
     border: solid 2px blue;
-    padding-top: 8px;
-    padding-bottom: 10px;
-    padding-left: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 27px;
     padding-right: 10px;
     border-radius: 10px;
     font-family: 'Fira Sans';
