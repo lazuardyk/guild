@@ -16,6 +16,7 @@
     <div class="bg-hijau">
         <nav class="transparent">
         <div class="nav-wrapper">
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <a href="#" class="brand-logo"><img src="images/logo.png" alt="Logo" width="70"><span>Laz Guild</span></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="#home" class="text-nav">Home</a></li>
@@ -26,6 +27,13 @@
             </ul>
         </div>
         </nav>
+        <ul class="sidenav" id="mobile-nav">
+          <li><a href="#home" class="text-nav">Home</a></li>
+          <li><a href="#jobs" class="text-nav">Jobs</a></li>
+          <li><a href="#topmembers" class="text-nav">Top Members</a></li>
+          <li><a href="sso.html" class="text-nav">Register</a></li>
+          <li><a href="login.html" class="text-nav">Login</a></li>
+        </ul>
         <div class="container scrollspy" id="home">
             <div class="row">
                 <div class="col s12 center-align">
@@ -205,6 +213,8 @@
       document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.scrollspy');
         var instances = M.ScrollSpy.init(elems, {});
+        var elems2 = document.querySelectorAll('.sidenav');
+        var instances2 = M.Sidenav.init(elems2, {});
       });
     </script>
   </body>
