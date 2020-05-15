@@ -1,3 +1,44 @@
+@media screen and (max-width: 600px) {
+    .brand-logo {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .brand-logo {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        font-family: 'Bebas Neue' !important;
+        color: #C1272D !important;
+        letter-spacing: 2px;
+      }
+}
+
+@media screen and (min-width: 600px) {
+    .wrap {
+        font-size: 20px !important;
+      }
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 10px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.text-nav {
+    font-family: 'Fira Sans';
+    color: #000000 !important;
+    font-size: 20px;
+}
+
+.transparent {
+    box-shadow:none !important;
+}
+
 @font-face {
     font-family: "Bebas Neue";
     src: url(../fonts/BebasNeue-Regular.ttf);
@@ -10,6 +51,7 @@
 
 .font-bebas {
     font-family: 'Bebas Neue';
+    letter-spacing: 2px;
     color: #C1272D;
 }
 

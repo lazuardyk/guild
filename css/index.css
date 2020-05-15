@@ -1,48 +1,40 @@
-@media screen and (max-width: 600px) {
-    .brand-logo {
-        display: none !important;
-    }
-}
-
-@media screen and (min-width: 600px) {
-    .brand-logo {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: flex-start !important;
-        font-family: 'Bebas Neue' !important;
-        color: #C1272D !important;
-      }
-}
-
 .button-join {
   border: 2px solid #C1272D;
-  background-color: white;
-  color: #C1272D;
-  padding: 5px 50px;
-  font-size: 30px;
-  font-family: 'Bebas Neue';
+  background-color: #C1272D;
+  color: white;
+  padding: 5px 40px;
+  font-size: 25px;
+  font-family: 'Fira Sans';
   cursor: pointer;
-  border-color: #f44336;
-  border-radius: 50px;
+  border-color: #C1272D;
+  border-radius: 15px;
   margin-bottom: 30px;
 }
 
+.button-about {
+    border: 2px solid #50232a;
+    background-color: transparent;
+    color: #50232a;
+    padding: 5px 30px;
+    font-size: 25px;
+    font-family: 'Fira Sans';
+    cursor: pointer;
+    border-radius: 15px;
+    margin-bottom: 30px;
+  }
+
 .button-join:focus{
-    background-color: white !important;
+    background-color: #C1272D !important;
 }
 
-.text-nav {
-    font-family: 'Fira Sans';
-    color: #000000 !important;
-    font-size: 20px;
+.button-about:focus {
+    background-color: transparent !important;
 }
 
 .bg-hijau {
-    background: rgba(57, 181, 74, 0.5)
-}
-
-.transparent {
-    box-shadow:none !important;
+    background: rgba(57, 181, 74, 0.5);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #our-jobs {
@@ -53,20 +45,6 @@
     font-size: 30px;
     font-family: 'Bebas Neue';
     border-color: #f44336;
-}
-
-@media screen and (min-width: 600px) {
-    .wrap {
-        font-size: 20px !important;
-      }
-}
-
-.wrap {
-  display: flex;
-  justify-content: space-between;
-  margin: 0px 10px;
-  padding: 10px;
-  font-size: 15px;
 }
 
 #tombol-tambah {
