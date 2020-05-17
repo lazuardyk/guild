@@ -49,6 +49,16 @@
     src: url(../fonts/FiraSans-Regular.ttf);
     }
 
+@font-face {
+    font-family: "Playfair Display Bold";
+    src: url(../fonts/PlayfairDisplay-Bold.ttf);
+    }
+
+@font-face {
+    font-family: "Playfair Display";
+    src: url(../fonts/PlayfairDisplay-Regular.ttf);
+    }
+
 .font-bebas {
     font-family: 'Bebas Neue';
     letter-spacing: 2px;
@@ -57,6 +67,14 @@
 
 .font-fira {
     font-family: 'Fira Sans';
+}
+
+.font-playfair-bold {
+    font-family: 'Playfair Display Bold';
+}
+
+.font-playfair {
+    font-family: 'Playfair Display';
 }
 
 .vertical-middle {
