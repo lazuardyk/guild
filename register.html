@@ -5,7 +5,7 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-      <link type="text/css" rel="stylesheet" href="css/font.css"/>
+      <link type="text/css" rel="stylesheet" href="css/global.css"/>
       <link type="text/css" rel="stylesheet" href="css/register.css" />
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -13,6 +13,28 @@
     </head>
 
     <body class="bg-hijau">
+        <nav class="transparent">
+        <div class="nav-wrapper">
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <a href="#" class="brand-logo"><img src="images/logo.svg" style="margin: 8px;" alt="Logo" width="54px"><span>Erudite</span></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="index.html" class="text-nav">Home</a></li>
+            <li><a href="index.html#jobs" class="text-nav">Jobs</a></li>
+            <li><a href="index.html#topmembers" class="text-nav">Top Members</a></li>
+            <li><a href="sso.html" class="text-nav">Register</a></li>
+            <li><a href="login.html" class="text-nav">Login</a></li>
+            <li><a href="dev.html" class="text-nav">Dev_Info</a></li>
+            </ul>
+        </div>
+        </nav>
+        <ul class="sidenav" id="mobile-nav">
+            <li><a href="index.html" class="text-nav">Home</a></li>
+            <li><a href="index.html#jobs" class="text-nav">Jobs</a></li>
+            <li><a href="index.html#topmembers" class="text-nav">Top Members</a></li>
+            <li><a href="sso.html" class="text-nav">Register</a></li>
+            <li><a href="login.html" class="text-nav">Login</a></li>
+            <li><a href="dev.html" class="text-nav">Dev_Info</a></li>
+        </ul>
             <div class="container">
                 <div class="row">
                     <div class="col s12 m8 offset-m2">
@@ -28,7 +50,7 @@
                             <a href="login.html" class="modal-close waves-effect waves-green btn">Login</a>
                             </div>
                         </div>
-                        <span class="brand-logo font-bebas" style="font-size: 40px;"><img src="images/logo.svg" style="margin-right: 10px;" alt="Logo" width="70px"><span>Erudite</span></span>
+                        <!-- <div class="font-bebas center-align" style="font-size: 40px;"><img src="images/logo.svg" class="vertical-middle" style="margin-right: 10px;" alt="Logo" width="70px">Erudite</div> -->
                         <div class="card">
                             <div class="card-content">
                                 <p class="font-fira" style="text-align: center; margin-bottom: 25px; font-size:200%; color:#333533;">Registration Form</p>
@@ -80,6 +102,10 @@
                     </div>
                 </div>
             </div>
+        <div class="wrap font-fira">
+            <span class="valign-wrapper" style="margin-left: 20px;">Copyright © Laz Guild 2020</span>
+            <span>Follow us <a href="#"><img src="images/icon-fb.png" class="vertical-middle" width="15%"> </a><a href="#"><img src="images/icon-tw.png" class="vertical-middle" width="16%"></a> <a href="#"><img src="images/icon-ig.png" class="vertical-middle" width="17%"></a></span>
+        </div>
       <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script>

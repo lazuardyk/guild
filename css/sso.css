@@ -16,10 +16,6 @@ html, body, .container {
     height: 100%;
 }
 
-.bg-hijau {
-    background: rgba(57, 181, 74, 0.5) !important;
-}
-
 .tombol-fb {
     border: solid 2px blue;
     padding-top: 12px;

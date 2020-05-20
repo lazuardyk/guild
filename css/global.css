@@ -21,6 +21,12 @@
       }
 }
 
+.bg-hijau {
+    background: rgba(57, 181, 74, 0.3);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .wrap {
   display: flex;
   justify-content: space-between;
