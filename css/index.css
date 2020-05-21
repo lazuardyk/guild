@@ -112,4 +112,5 @@ td {
 
 .carousel {
     min-height: 195px;
+    max-height: 195px;
 }
