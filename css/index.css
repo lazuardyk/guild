@@ -61,7 +61,7 @@
 }
 
 .card {
-    border-radius: 10% !important;
+    border-radius: 10%;
 }
 
 .button-take {
@@ -110,6 +110,6 @@ td {
     color: #C1272D;
 }
 
-.carousel { 
-    max-height: 200px;
+.carousel {
+    min-height: 195px;
 }
