@@ -67,7 +67,7 @@
         <div class="col s12 m3 center-align">
           <img src="images/logo.svg" alt="" class="responsive-image" width="70%" style="filter: drop-shadow(5px 3px 5px rgb(223, 94, 8)); margin-bottom: 20px;">
         </div>
-        <div class="col s12 m6">
+        <div class="col s12 m6" style="margin-bottom: 20px;">
           <span class="font-fira" style="font-size: 18px;">Erudite is a platform where you can connect with the people in your life. Here you can communicate with many people in various places, find work and get the money, even create a new jobs.  With 1 million members, you can free to use it, anywhere and anytime.</span>
         </div>
         <div class="col s12 m3">
@@ -76,18 +76,13 @@
             <div class="carousel-fixed-item center">
             </div>
             <div class="carousel-item red white-text font-fira" href="#one!">
-              <img src="images/man1.jpg" class="circle" alt="" style="width: 80px; margin-top: 15px;">
+              <img src="images/man1.png" class="circle" alt="" style="width: 80px; height:80px; margin-top: 15px;">
               <p style="font-weight: bold; font-size: 14px; margin-bottom: 0px; margin-top: 3px;">Spencer Roberto</p>
-              <p style="font-size: 14px; margin-top: 0px;">Chief Executive Officer</p>
+              <p style="font-size: 14px; margin-top: 0px;">Founder</p>
             </div>
             <div class="carousel-item red white-text font-fira" href="#one!">
-              <img src="images/man1.jpg" class="circle" alt="" style="width: 80px; margin-top: 15px;">
-              <p style="font-weight: bold; font-size: 14px; margin-bottom: 0px; margin-top: 3px;">Spencer Roberto</p>
-              <p style="font-size: 14px; margin-top: 0px;">Chief Executive Officer</p>
-            </div>
-            <div class="carousel-item red white-text font-fira" href="#one!">
-              <img src="images/man1.jpg" class="circle" alt="" style="width: 80px; margin-top: 15px;">
-              <p style="font-weight: bold; font-size: 14px; margin-bottom: 0px; margin-top: 3px;">Spencer Roberto</p>
+              <img src="images/man2.png" class="circle" alt="" style="width: 80px; height:80px; margin-top: 15px;">
+              <p style="font-weight: bold; font-size: 14px; margin-bottom: 0px; margin-top: 3px;">Billy Davidson</p>
               <p style="font-size: 14px; margin-top: 0px;">Chief Executive Officer</p>
             </div>
           </div>
@@ -102,12 +97,24 @@
           <!-- <div class="center-align">
             <span id="our-jobs">JOIN AND GET THE BENEFITS</span><br><br>
           </div> -->
+          <div class="center-align">
+            <span id="our-jobs">BENEFITS</span><br><br>
+          </div>
           <div class="row">
             <div class="col s12 m3 center-align">
               <div class="card green darken-1 z-depth-3" style="height: 15em;">
                 <div class="card-content white-text font-fira">
                   <img src="images/work.svg" alt="work" width="150px" height="110px">
-                  <span class="card-title center-align" style="font-weight: bold; font-size: 20px; color: yellow;">Find or Create a Jobs</span>
+                  <span class="card-title center-align" style="margin-bottom:0px; margin-top:20px; font-weight: bold; font-size: 20px; color: yellow;">Find a Jobs</span>
+                  <!-- <p style="color: yellow; margin-top: 0px;">Find your S</p> -->
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m3 center-align">
+              <div class="card green darken-1 z-depth-3">
+                <div class="card-content white-text font-fira" style="height: 15rem;">
+                  <img src="images/hire.svg" alt="work" width="150px" height="110px">
+                  <span class="card-title center-align" style="margin-top:20px; font-weight: bold; font-size: 20px; color: yellow;">Hire a Workers</span>
                 </div>
               </div>
             </div>
@@ -127,14 +134,6 @@
                 </div>
               </div>
             </div>
-            <div class="col s12 m3 center-align">
-              <div class="card green darken-1 z-depth-3">
-                <div class="card-content white-text font-fira" style="height: 15rem;">
-                  <img src="images/secure.svg" alt="work" width="150px" height="110px">
-                  <span class="card-title center-align" style="margin-top:20px; font-weight: bold; font-size: 20px; color: yellow;">Keep Secure</span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -142,7 +141,7 @@
       <div class="row">
         <div class="col s12">
           <div class="center-align">
-            <span id="our-jobs">BUT HOW?</span><br><br>
+            <span id="our-jobs">FREQUENTLY ASKED QUESTION</span><br><br>
           </div>
           <div style="border-left: 6px solid rgb(170, 21, 21); height: 40px; display: inline-block; margin-right: 15px;" class="vertical-middle"></div><span style="font-weight: bold; font-size: 20px;" class="font-playfair vertical-middle">How to Join?</span><br>
           <div style="margin-left: 20px; font-size: 17px; color:#5f5d5d;" class="font-fira">Register and connect with your social media account <a href="sso.html">here.</a></div>
@@ -167,6 +166,12 @@
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script>
+      function moveNextCarousel() {
+        var elems = document.querySelector('.carousel.carousel-slider');
+        var moveRight = M.Carousel.getInstance(elems);
+        moveRight.next(1);
+      }
+
       document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.scrollspy');
         var instances = M.ScrollSpy.init(elems, {});
@@ -174,6 +179,9 @@
         var instances2 = M.Sidenav.init(elems2, {});
         var elems3 = document.querySelectorAll('.carousel');
         var instances3 = M.Carousel.init(elems3, {'fullWidth':'true', 'indicators':'true'});
+        setTimeout(() => {
+          moveNextCarousel();
+        }, 2000);
       });
     </script>
   </body>
