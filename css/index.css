@@ -41,8 +41,8 @@
     border: 2px solid #C1272D;
     background-color: white;
     color: #C1272D;
-    padding: 0px 10px;
-    font-size: 30px;
+    padding: 4px 15px;
+    font-size: 35px;
     font-family: 'Bebas Neue';
     border-color: #f44336;
 }
@@ -100,4 +100,12 @@ table {
 
 td {
     padding: 7px;
+}
+
+.alert-new {
+    border: 1px solid red;
+    padding: 5px 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 0, 0, 0.2);
+    color: #C1272D;
 }
