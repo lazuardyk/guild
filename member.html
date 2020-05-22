@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/global.css"/>
+    <link type="text/css" rel="stylesheet" href="css/member.css"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Laz Guild</title>
+  </head>
+  <body>
+    <div class="bg-hijau">
+        <nav class="transparent">
+        <div class="nav-wrapper">
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <a href="#" class="brand-logo"><img src="images/logo.svg" style="margin: 8px;" alt="Logo" width="54px"><span>Erudite</span></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#home" class="text-nav">Home</a></li>
+            <li><a href="#jobs" class="text-nav">Jobs</a></li>
+            <li><a href="#topmembers" class="text-nav">Top Members</a></li>
+            <li><a href="sso.html" class="text-nav">Register</a></li>
+            <li><a href="login.html" class="text-nav">Log out</a></li>
+            <!-- <li><a href="dev.html" class="text-nav">Dev_Info</a></li> -->
+            </ul>
+        </div>
+        </nav>
+        <ul class="sidenav" id="mobile-nav">
+          <li><a href="#home" class="text-nav">Home</a></li>
+          <li><a href="#jobs" class="text-nav">Jobs</a></li>
+          <li><a href="#topmembers" class="text-nav">Top Members</a></li>
+          <li><a href="sso.html" class="text-nav">Register</a></li>
+          <li><a href="login.html" class="text-nav">Login</a></li>
+          <li><a href="dev.html" class="text-nav">Dev_Info</a></li>
+        </ul>
+        <div class="scrollspy" id="home">
+            <div class="row" style="padding-bottom: 40px;">
+                <div class="col s12 m6">
+                    <div style="margin-bottom: 0px; margin-top: 80px;" class="center-align">
+                        <!-- <img class="vertical-middle" src="images/logo.png" alt="Logo" width="150">
+                        <div class="vertical-middle" style="display: inline-block; margin-top: -55px;">
+                            <p class="font-bebas" style="font-size: 70px; margin-bottom:0px; ">ERUDITE</p>
+                        </div> -->
+                    
+                    <!-- <p class="font-fira" style="margin-top: 0px; font-size: 20px;"><i class="material-icons vertical-middle">location_on</i> Daksinapati St. 123, NY 21389, United States</p> -->
+                    <p class="font-playfair-bold" style="font-size: 50px; margin-bottom: 0px; margin-top: 0px; color:#50232a;">Welcome, Lazuardy!</p>
+                    <p style="font-family: 'Fira Sans'; font-size: 20px; margin-top: 0px; color:#423c3e; margin-bottom: 0px;">Try to find a job that fit your skill.</p>
+                    <div class="row">
+                        <div class="input-field col s6 offset-s3">
+                          <i class="material-icons prefix">search</i>
+                          <input id="icon_prefix" type="text" class="validate">
+                          <label for="icon_prefix">Search a Job</label>
+                        </div>
+                        <div class="col s12">
+                            <button class="button-join waves-effect waves-light">Search</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col hide-on-small-only m3 offset-m1">
+                    <div class="card" style="border-radius: 0px;">
+                        <div class="card-image">
+                          <img src="images/man1.png" style="width: 200px; margin: auto;">
+                          <!-- <span class="card-title">Card Title</span> -->
+                          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">edit</i></a>
+                        </div>
+                        <div class="card-content">
+                          <p>Account Information</p>
+                          <p>Name: Lazuardy Khatulistiwa</p>
+                          <p>NIK: 3182372614658</p>
+                          <p>Address: 4640 Fowler Avenue, GA 30501, US</p>
+                          <p>Telp: 081395863983</p>
+                          <p></p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 center-align" style="position:relative;">
+                <span id="our-jobs">Job List</span>
+                <span id="tombol-tambah" style="position: absolute; right: 0;">+</span>
+            </div>
+          </div>
+          <div class="row scrollspy" id="jobs">
+            <div class="col s12 m3">
+              <div class="card green darken-2 z-depth-3">
+                <div class="card-content white-text font-fira">
+                  <span class="card-title center-align" style="font-size: 22px;">Kill 10 Enemy</span>
+                  <p style="font-family: Georgia; opacity: 80%;">Kill 10 enemy heroes who are in Penalty Zone in total.</p>
+                  <p style="margin-top: 10px;">Rank required: <span style="color: yellow;">Platinum</span></p>
+                  <p>Prize: <span style="color: yellow;">500$</span></p>
+                  <p>Issuer: <span style="color: yellow;">royalknight</span></p>
+                  <p>Time limit: <span style="color: yellow;">24 hours</span></p>
+                  <span class="button-take" style="display: block; margin: 0px 15px; margin-top: 15px;">Take</span>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m3">
+              <div class="card green darken-2 z-depth-3">
+                <div class="card-content white-text font-fira">
+                  <span class="card-title center-align" style="font-size: 22px;">Solidarity</span>
+                  <p style="font-family: Georgia; opacity: 80%;">Team up with me and win 2 matches. Fight them all</p>
+                  <p style="margin-top: 10px;">Rank required: <span style="color: yellow;">Gold</span></p>
+                  <p>Prize: <span style="color: yellow;">100$</span></p>
+                  <p>Issuer: <span style="color: yellow;">pewdiepie</span></p>
+                  <p>Time limit: <span style="color: yellow;">5 hours</span></p>
+                  <span class="button-take" style="display: block; margin: 0px 15px; margin-top: 15px;">Take</span>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m3">
+              <div class="card green darken-2 z-depth-3">
+                <div class="card-content white-text font-fira">
+                  <span class="card-title center-align" style="font-size: 22px;">Defeat Invaders</span>
+                  <p style="font-family: Georgia; opacity: 80%;">Use enhanced basic attacks gained from the Passive.</p>
+                  <p style="margin-top: 10px;">Rank required: <span style="color: yellow;">Silver</span></p>
+                  <p>Prize: <span style="color: yellow;">299$</span></p>
+                  <p>Issuer: <span style="color: yellow;">zeeplyn123</span></p>
+                  <p>Time limit: <span style="color: yellow;">8 hours</span></p>
+                  <span class="button-take" style="display: block; margin: 0px 15px; margin-top: 15px;">Take</span>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m3">
+              <div class="card green darken-2 z-depth-3">
+                <div class="card-content white-text font-fira">
+                  <span class="card-title center-align" style="font-size: 22px;">Defend Invasion</span>
+                  <p style="font-family: Georgia; opacity: 80%;">Win a match while the First Blood is achieved by the enemy team.</p>
+                  <p style="margin-top: 10px;">Rank required: <span style="color: yellow;">Iron</span></p>
+                  <p>Prize: <span style="color: yellow;">300$</span></p>
+                  <p>Issuer: <span style="color: yellow;">crazygamer12</span></p>
+                  <p>Time limit: <span style="color: yellow;">12 hours</span></p>
+                  <span class="button-take" style="display: block; margin: 0px 15px; margin-top: 15px;">Take</span>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <ul class="pagination">
+            <li class="disabled"><a href="#!"><span style="color: white;"><i class="material-icons">chevron_left</i></span></a></li>
+            <li class="active"><a href="#!">1</a></li>
+            <li class="waves-effect"><a href="#!"><span style="color: white;">2</span></a></li>
+            <li class="waves-effect"><a href="#!"><span style="color: white;">3</span></a></li>
+            <li class="waves-effect"><a href="#!"><span style="color: white;">4</span></a></li>
+            <li class="waves-effect"><a href="#!"><span style="color: white;">5</span></a></li>
+            <li class="waves-effect"><a href="#!"><span style="color: white;"><i class="material-icons">chevron_right</i></span></a></li>
+          </ul>
+    </div>
+
+    <div class="bg-hijau">
+      <div class="wrap font-fira">
+        <span class="valign-wrapper" style="margin-left: 20px;">Copyright © Erudite 2020</span>
+        <span>Follow us <a href="#"><img src="images/icon-fb.png" class="vertical-middle" width="15%"> </a><a href="#"><img src="images/icon-tw.png" class="vertical-middle" width="16%"></a> <a href="#"><img src="images/icon-ig.png" class="vertical-middle" width="17%"></a></span>
+      </div>
+    </div>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+      function moveNextCarousel() {
+        var elems = document.querySelector('.carousel.carousel-slider');
+        var moveRight = M.Carousel.getInstance(elems);
+        moveRight.next(1);
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.scrollspy');
+        var instances = M.ScrollSpy.init(elems, {});
+        var elems2 = document.querySelectorAll('.sidenav');
+        var instances2 = M.Sidenav.init(elems2, {});
+        var elems3 = document.querySelectorAll('.carousel');
+        var instances3 = M.Carousel.init(elems3, {'fullWidth':'true', 'indicators':'true'});
+        setTimeout(() => {
+          moveNextCarousel();
+        }, 2000);
+      });
+    </script>
+  </body>
+</html>
