@@ -2,7 +2,7 @@
   border: 2px solid #C1272D;
   background-color: #C1272D;
   color: white;
-  padding: 2px 40px;
+  padding: 2px 35px;
   font-size: 25px;
   font-family: 'Fira Sans';
   cursor: pointer;
@@ -15,7 +15,7 @@
     border: 2px solid #50232a;
     background-color: transparent;
     color: #50232a;
-    padding: 5px 30px;
+    padding: 5px 28px;
     font-size: 25px;
     font-family: 'Fira Sans';
     cursor: pointer;
