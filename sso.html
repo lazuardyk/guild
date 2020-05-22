@@ -7,16 +7,45 @@
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta name="google-signin-client_id" content="288771713310-1o17hp74ve60c4to8s4nn0gq4ss3iii1.apps.googleusercontent.com">
       <link type="text/css" rel="stylesheet" href="css/global.css"/>
       <link type="text/css" rel="stylesheet" href="css/sso.css"/>
       <title>Register - Erudite</title>
+
+      <script src="https://apis.google.com/js/api:client.js"></script>
+      <script>
+      var googleUser = {};
+      var startApp = function() {
+        gapi.load('auth2', function(){
+          // Retrieve the singleton for the GoogleAuth library and set up the client.
+          auth2 = gapi.auth2.init({
+            client_id: '288771713310-1o17hp74ve60c4to8s4nn0gq4ss3iii1.apps.googleusercontent.com',
+            cookiepolicy: 'single_host_origin',
+            // Request scopes in addition to 'profile' and 'email'
+            //scope: 'additional_scope'
+          });
+          attachSignin(document.getElementById('google'));
+        });
+      };
+
+      function attachSignin(element) {
+        console.log(element.id);
+        auth2.attachClickHandler(element, {},
+            function(googleUser) {
+              document.getElementById('name').innerText = "Signed in: " +
+                  googleUser.getBasicProfile().getName();
+            }, function(error) {
+              alert(JSON.stringify(error, undefined, 2));
+            });
+      }
+      </script>
     </head>
 
     <body class="bg-hijau">
       <nav class="transparent">
         <div class="nav-wrapper">
             <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <a href="#" class="brand-logo"><img src="images/logo.svg" style="margin: 8px;" alt="Logo" width="54px"><span>Erudite</span></a>
+            <a href="index.html" class="brand-logo hide-on-small-only"><img src="images/logo.svg" style="margin: 8px;" alt="Logo" width="54px"><span>Erudite</span></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="index.html#home" class="text-nav">Home</a></li>
             <li><a href="index.html#about" class="text-nav">About</a></li>
@@ -52,7 +81,9 @@
                         <div class="card z-depth-3">
                             <div class="card-content">
                                 <p class="font-fira" style="margin-top: 0px; margin-bottom: 25px; font-size: 25px;">Registration</p>
-                                <p style="margin: 15px 10px;"><a href="register.html" style="color: inherit;"><span class="tombol-gg" style="display: block;"><img src="images/icon-gg.png" class="vertical-middle" width="12%" style="margin-right: 15px;"> Register with Google</span></a></p>
+                                <div style="margin: 15px 10px;" id="google"><span class="tombol-gg" style="display: block;"><img src="images/icon-gg.png" class="vertical-middle" width="12%" style="margin-right: 15px;"> Register with Google</span></div>
+                                <div id="name"></div>
+                                <script>startApp();</script>
                                 <p style="margin: 15px 10px;"><a href="register.html" style="color: inherit;"><span class="tombol-fb" style="display: block;"><img src="images/icon-fb.png" class="vertical-middle" width="12%" style="margin-right: 15px;"> Register with Facebook</span></a></p>
                                 <p style="margin: 15px 10px;"><a href="register.html" style="color: inherit;"><span class="tombol-tw" style="display: block;"><img src="images/icon-tw.png" class="vertical-middle" width="12%" style="margin-right: 15px;"> Register with Twitter</span></a></p>
                                 <p style="margin: 15px 10px;"><a href="register.html" style="color: inherit;"><span class="tombol-gt" style="display: block;"><img src="images/icon-gt.png" class="vertical-middle" width="12%" style="margin-right: 15px;"> Register with Github</span></a></p>
@@ -68,6 +99,7 @@
           <span>Follow us <a href="#"><img src="images/icon-fb.png" class="vertical-middle" width="15%"> </a><a href="#"><img src="images/icon-tw.png" class="vertical-middle" width="16%"></a> <a href="#"><img src="images/icon-ig.png" class="vertical-middle" width="17%"></a></span>
         </div>
       <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
       <script>
         document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.datepicker');
