@@ -1,4 +1,4 @@
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
     .brand-logo {
         display: none !important;
     }
@@ -13,7 +13,16 @@
         color: #C1272D !important;
         letter-spacing: 2px;
       }
-}
+} */
+
+.brand-logo {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    font-family: 'Bebas Neue' !important;
+    color: #C1272D !important;
+    letter-spacing: 2px;
+  }
 
 @media screen and (min-width: 600px) {
     .wrap {
