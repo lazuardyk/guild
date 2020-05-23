@@ -55,7 +55,7 @@
                         <div class="card">
                             <div class="card-content">
                                 <p class="font-fira" style="text-align: center; margin-bottom: 25px; font-size:200%; color:#333533;">Registration Form</p>
-                                <form action="">
+                                <form action="member.html">
                                 <div class="input-field">
                                     <input value="" id="username" type="text" class="validate" required>
                                     <label for="username">Username</label>
@@ -64,7 +64,7 @@
                                     <div class="row" style="margin: 0;">
                                         <div class="col s7 m9" style="padding: 0; height: 70px;">
                                             <div class="input-field">
-                                                <input onkeyup="checkStrengthPwd()" placeholder="Password" id="password" type="password" class="">
+                                                <input onkeyup="checkStrengthPwd()" placeholder="Password" id="password" type="password" class="" required>
                                                 <label for="password">Password</label>
                                                 <!-- <span class="password-msg" data-error="wrong" data-success="right"></span> -->
                                             </div>
@@ -135,21 +135,23 @@
                                 </div>
                                 <div style="margin-bottom: -20px;">
                                     <div class="row" style="padding: 0;">
-                                        <div class="col s6" style="">
-                                            <div class="input-field">
-                                                <input placeholder="+628139847255" id="first_name" type="text" class="validate" required>
-                                                <label for="first_name">Handphone Number</label>
+                                        <div class="col s6">
+                                            <div class="input-field" style="margin-bottom: 0px;">
+                                                <input onkeyup="checkPhone(1)" placeholder="+628139847255" id="phone" type="text" class="" style="margin-top: 5px;" required>
+                                                <label for="phone1">Handphone Number</label>
                                             </div>
+                                            <span class="phone-msg" data-error="wrong" data-success="right"></span>
                                         </div>
-                                        <div class="col s6" style="">
-                                            <div class="input-field">
-                                                <input placeholder="+628139847255" id="first_name" type="text" class="validate">
-                                                <label for="first_name">Telephone Number (Optional)</label>
+                                        <div class="col s6">
+                                            <div class="input-field" style="margin-bottom: 0px;">
+                                                <input onkeyup="checkPhone(2)" placeholder="+628139847255" id="phone2" type="text" class="" style="margin-top: 5px;">
+                                                <label for="phone2" style="">Telephone Number (Optional)</label>
                                             </div>
+                                            <span class="phone2-msg" data-error="wrong" data-success="right"></span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="input-field">
+                                <div class="input-field" style="margin-top: 35px;">
                                     <input value="" id="profession" type="text" class="validate" required>
                                     <label for="profession">Profession</label>
                                 </div>
@@ -162,7 +164,7 @@
                                     <label for="birthdate">Birthdate</label>
                                 </div>
                                 
-                                <div style="text-align: center;"><a href="member.html"><button type="submit" class="btn">Register</button></a></div>
+                                <div style="text-align: center;"><a href="member.html" onclick="checkInput(event)"><button type="submit" class="btn">Register</button></a></div>
                                 <!-- <div style="text-align: center;"><a data-target="modal1" class="waves-effect waves-light btn modal-trigger">Register</a></div> -->
                                 </form>
                             </div>
@@ -188,7 +190,7 @@
         function checkStrengthPwd(){
             var pwd = document.querySelector('#password');
             var msg = document.querySelector('.password-msg');
-            var regex = '/^[A-Za-z0-9]+$/';
+            var regex = /^[A-Za-z0-9]+$/;
             if (pwd.value.length < 6){
                 msg.innerHTML = '<span style="color: red;">Password is too short!</span>';
                 pwd.classList.remove("valid");
@@ -198,6 +200,7 @@
                 pwd.classList.remove("valid");
                 pwd.classList.add("invalid");
             } else {
+                checkMatchPwd();
                 msg.innerHTML = '';
                 pwd.classList.remove("invalid");
                 pwd.classList.add("valid");
@@ -260,6 +263,40 @@
             pwd.value = '';
             pwd.value = generatePassword();
             showPwd();
+        }
+
+        function checkPhone(n){
+            if (n == 1){
+                var phone = document.querySelector('#phone').value;
+                var msg = document.querySelector('.phone-msg');
+            } else if (n == 2){
+                var phone = document.querySelector('#phone2').value;
+                var msg = document.querySelector('.phone2-msg');
+            }
+            if (phone.match(/^\+[1-9]{1}[0-9]{3,14}$/)){
+                msg.innerHTML = '';
+                phone.classList.remove("invalid");
+                phone.classList.add("valid");
+            } else {
+                msg.innerHTML = '<span style="color: red;">Phone number should contain country and area code.</span>';
+                phone.classList.remove("valid");
+                phone.classList.add("invalid");
+            }
+        }
+
+        function checkInput(event){
+            var input = document.querySelectorAll("input");
+            // alert(input.length);
+            var error = false;
+            input.forEach(function(item, index, list){
+                if (item.classList.contains("invalid")){
+                    error = true;
+                }
+            });
+            if(error){
+                event.preventDefault();
+                alert("Please check the error on your account information!");
+            }
         }
       </script>
     </body>
