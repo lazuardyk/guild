@@ -55,39 +55,54 @@
                         <div class="card">
                             <div class="card-content">
                                 <p class="font-fira" style="text-align: center; margin-bottom: 25px; font-size:200%; color:#333533;">Registration Form</p>
+                                <form action="">
                                 <div class="input-field">
                                     <input value="" id="username" type="text" class="validate" required>
                                     <label for="username">Username</label>
                                 </div>
-                                <div style="margin-top: -20px; margin-bottom: -20px;">
+                                <div style="margin-top: -15px;">
                                     <div class="row" style="margin: 0;">
-                                        <div class="col s8 m9" style="padding: 0;">
+                                        <div class="col s7 m9" style="padding: 0; height: 70px;">
                                             <div class="input-field">
-                                                <input value="" id="password" type="password" class="validate" required>
+                                                <input placeholder="Password" id="password" type="password" class="validate" required>
                                                 <label for="password">Password</label>
                                             </div>
                                         </div>
-                                        <div class="col s4 m3" style="padding: 0;">
-                                            <button class="btn" style="margin-top: 20px; margin-left: 5px;">Generate</button>
+                                        <div class="col s5 m3" style="padding: 0;">
+                                            <i onclick="showPwd(1)" id="vis" class="material-icons vertical-middle" style="cursor: pointer; margin-top: 20px;">visibility_off</i>
+                                            <span onclick="generatePwd()" class="btn vertical-middle" style="margin-top: 20px; margin-left: 5px; font-size: 12px; padding: 0px 8px;">Generate</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="input-field">
+                                <div style="margin-top: -15px; margin-bottom: -15px;">
+                                    <div class="row" style="margin: 0;">
+                                        <div class="col s7 m9" style="padding: 0;">
+                                            <div class="input-field">
+                                                <input placeholder="Confirm Password" id="password2" type="password" class="validate" required>
+                                                <label for="password2">Confirm Password</label>
+                                            </div>
+                                        </div>
+                                        <div class="col s5 m3" style="padding: 0;">
+                                            <i onclick="showPwd(2)" id="vis2" class="material-icons" style="cursor: pointer; margin-top: 30px;">visibility_off</i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="input-field">
                                     <input value="" id="password2" type="password" class="validate" required>
                                     <label for="password2">Confirm Password</label>
-                                </div>
+                                </div> -->
                                 <div class="input-field">
                                     <input value="Lazuardy Khatulistiwa" id="full_name" type="text" class="validate">
                                     <label for="full_name">Full Name</label>
                                 </div>
                                 <div class="input-field">
-                                    <input value="" id="nik" type="number" class="validate" required>
+                                    <input placeholder="31882137271405587" value="" id="nik" type="number" class="validate" required>
                                     <label for="nik">NIK</label>
                                 </div>
                                 <div class="file-field input-field">
                                     <div class="btn">
                                       <span>Upload KTP</span>
-                                      <input type="file">
+                                      <input type="file" id="ktp" required>
                                     </div>
                                     <div class="file-path-wrapper">
                                       <input class="file-path validate" type="text" value="Choose a file" required>
@@ -121,7 +136,7 @@
                                     <div class="row" style="padding: 0;">
                                         <div class="col s6" style="">
                                             <div class="input-field">
-                                                <input placeholder="+628139847255" id="first_name" type="text" class="validate">
+                                                <input placeholder="+628139847255" id="first_name" type="text" class="validate" required>
                                                 <label for="first_name">Handphone Number</label>
                                             </div>
                                         </div>
@@ -134,18 +149,21 @@
                                     </div>
                                 </div>
                                 <div class="input-field">
-                                    <input value="" id="profession" type="text" class="validate">
+                                    <input value="" id="profession" type="text" class="validate" required>
                                     <label for="profession">Profession</label>
                                 </div>
                                 <div class="input-field">
-                                    <textarea id="skillset" class="materialize-textarea"></textarea>
+                                    <textarea id="skillset" class="materialize-textarea" required></textarea>
                                     <label for="skillset">Skillset</label>
                                 </div>
                                 <div class="input-field">
-                                    <input id="birthdate" value="" type="text" class="datepicker">
+                                    <input id="birthdate" value="" type="text" class="datepicker" required>
                                     <label for="birthdate">Birthdate</label>
                                 </div>
-                                <div style="text-align: center;"><a data-target="modal1" class="waves-effect waves-light btn modal-trigger">Register</a></div>
+                                
+                                <div style="text-align: center;"><button type="submit" class="btn">Register</button></div>
+                                <!-- <div style="text-align: center;"><a data-target="modal1" class="waves-effect waves-light btn modal-trigger">Register</a></div> -->
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -165,6 +183,49 @@
         var elems2 = document.querySelectorAll('.modal');
         var instances2 = M.Modal.init(elems2, {});
         });
+
+        function generatePassword() {
+            var length = 10,
+                charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+{}:,./'<>?",
+                retVal = "";
+            for (var i = 0, n = charset.length; i < length; ++i) {
+                retVal += charset.charAt(Math.floor(Math.random() * n));
+            }
+            return retVal;
+        }
+
+        function showPwd(n){
+            if (n == 1){
+                var pwd = document.querySelector('#password');
+                var vis = document.querySelector('#vis');
+            } else if (n == 2){
+                var pwd = document.querySelector('#password2');
+                var vis = document.querySelector('#vis2');
+            }
+            pwd.setAttribute('type', 'text');
+            vis.textContent = 'visibility';
+            vis.setAttribute('onclick', 'hidePwd('+n+')');
+        }
+
+        function hidePwd(n){
+            if (n == 1){
+                var pwd = document.querySelector('#password');
+                var vis = document.querySelector('#vis');
+            } else if (n == 2){
+                var pwd = document.querySelector('#password2');
+                var vis = document.querySelector('#vis2');
+            }
+            pwd.setAttribute('type', 'password');
+            vis.textContent = 'visibility_off';
+            vis.setAttribute('onclick', 'showPwd('+n+')');
+        }
+
+        function generatePwd(){
+            var pwd = document.querySelector('#password');
+            pwd.value = '';
+            pwd.value = generatePassword();
+            showPwd();
+        }
       </script>
     </body>
   </html>
