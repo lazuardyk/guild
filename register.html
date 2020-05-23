@@ -45,9 +45,7 @@
                         <div id="modal1" class="modal">
                             <div class="modal-content" style="text-align:center;">
                             <h4>Registration Successful</h4>
-                            <p>Thank you for registering! This is your account information:</p>
-                            <p style="margin: 0px;">Username: <b>lazuardykhat123</b></p>
-                            <p style="margin: 0px;">Password: <b>A!jf(8723!</b></p>
+                            <p>Thank you for registering!</p>
                             </div>
                             <div style="text-align:center; margin-bottom: 15px;">
                             <a href="login.html" class="modal-close waves-effect waves-green btn">Login</a>
@@ -58,46 +56,94 @@
                             <div class="card-content">
                                 <p class="font-fira" style="text-align: center; margin-bottom: 25px; font-size:200%; color:#333533;">Registration Form</p>
                                 <div class="input-field">
+                                    <input value="" id="username" type="text" class="validate" required>
+                                    <label for="username">Username</label>
+                                </div>
+                                <div style="margin-top: -20px; margin-bottom: -20px;">
+                                    <div class="row" style="margin: 0;">
+                                        <div class="col s8 m9" style="padding: 0;">
+                                            <div class="input-field">
+                                                <input value="" id="password" type="password" class="validate" required>
+                                                <label for="password">Password</label>
+                                            </div>
+                                        </div>
+                                        <div class="col s4 m3" style="padding: 0;">
+                                            <button class="btn" style="margin-top: 20px; margin-left: 5px;">Generate</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-field">
+                                    <input value="" id="password2" type="password" class="validate" required>
+                                    <label for="password2">Confirm Password</label>
+                                </div>
+                                <div class="input-field">
                                     <input value="Lazuardy Khatulistiwa" id="full_name" type="text" class="validate">
                                     <label for="full_name">Full Name</label>
                                 </div>
                                 <div class="input-field">
-                                    <input value="31682813071571257" id="nik" type="number" class="validate">
+                                    <input value="" id="nik" type="number" class="validate" required>
                                     <label for="nik">NIK</label>
                                 </div>
-                                <div style="margin-top: -10px; margin-bottom: 25px;">
-                                <label>Member Type</label>
-                                <select name="member-type" class="browser-default">
-                                    <option value="civilian" selected>Civilian</option>
-                                    <option value="member">Guild Member</option>
-                                </select>
-                                <label>Join Period</label>
-                                <select name="join-period" class="browser-default">
-                                    <option value="1" selected>1 Month</option>
-                                    <option value="3">3 Months</option>
-                                    <option value="6">6 Months</option>
-                                    <option value="12">12 Months</option>
-                                </select>
+                                <div class="file-field input-field">
+                                    <div class="btn">
+                                      <span>Upload KTP</span>
+                                      <input type="file">
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                      <input class="file-path validate" type="text" value="Choose a file" required>
+                                    </div>
                                 </div>
                                 <div class="input-field">
-                                    <input value="Student" id="profession" type="text" class="validate">
+                                    <input value="" id="address" type="text" class="validate" required>
+                                    <label for="address">Address</label>
+                                </div>
+                                <div style="margin-top: -10px; margin-bottom: -10px;">
+                                    <div class="row">
+                                        <div class="col s6">
+                                            <label>Member Type</label>
+                                            <select name="member-type" class="browser-default">
+                                                <option value="civilian" selected>Civilian</option>
+                                                <option value="member">Guild Member</option>
+                                            </select>
+                                        </div>
+                                        <div class="col s6">
+                                            <label>Join Period</label>
+                                            <select name="join-period" class="browser-default">
+                                                <option value="1" selected>1 Month</option>
+                                                <option value="3">3 Months</option>
+                                                <option value="6">6 Months</option>
+                                                <option value="12">12 Months</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="margin-bottom: -20px;">
+                                    <div class="row" style="padding: 0;">
+                                        <div class="col s6" style="">
+                                            <div class="input-field">
+                                                <input placeholder="+628139847255" id="first_name" type="text" class="validate">
+                                                <label for="first_name">Handphone Number</label>
+                                            </div>
+                                        </div>
+                                        <div class="col s6" style="">
+                                            <div class="input-field">
+                                                <input placeholder="+628139847255" id="first_name" type="text" class="validate">
+                                                <label for="first_name">Telephone Number (Optional)</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-field">
+                                    <input value="" id="profession" type="text" class="validate">
                                     <label for="profession">Profession</label>
                                 </div>
                                 <div class="input-field">
-                                    <textarea id="skillset" class="materialize-textarea">Web Programming</textarea>
+                                    <textarea id="skillset" class="materialize-textarea"></textarea>
                                     <label for="skillset">Skillset</label>
                                 </div>
                                 <div class="input-field">
-                                    <input value="Duren Sawit 123" id="address" type="text" class="validate">
-                                    <label for="address">Address</label>
-                                </div>
-                                <div class="input-field">
-                                    <input id="birthdate" value="18-10-2000" type="text" class="datepicker">
+                                    <input id="birthdate" value="" type="text" class="datepicker">
                                     <label for="birthdate">Birthdate</label>
-                                </div>
-                                <div class="input-field">
-                                    <input value="lazuardykhat123" id="codename" type="text" class="validate">
-                                    <label for="codename">Code Name</label>
                                 </div>
                                 <div style="text-align: center;"><a data-target="modal1" class="waves-effect waves-light btn modal-trigger">Register</a></div>
                             </div>
