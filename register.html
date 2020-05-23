@@ -64,8 +64,9 @@
                                     <div class="row" style="margin: 0;">
                                         <div class="col s7 m9" style="padding: 0; height: 70px;">
                                             <div class="input-field">
-                                                <input placeholder="Password" id="password" type="password" class="validate" required>
+                                                <input onkeyup="checkStrengthPwd()" placeholder="Password" id="password" type="password" class="">
                                                 <label for="password">Password</label>
+                                                <!-- <span class="password-msg" data-error="wrong" data-success="right"></span> -->
                                             </div>
                                         </div>
                                         <div class="col s5 m3" style="padding: 0;">
@@ -73,20 +74,20 @@
                                             <span onclick="generatePwd()" class="btn vertical-middle" style="margin-top: 20px; margin-left: 5px; font-size: 12px; padding: 0px 8px;">Generate</span>
                                         </div>
                                     </div>
+                                    <span class="password-msg" data-error="wrong" data-success="right"></span>
                                 </div>
-                                <div style="margin-top: -15px; margin-bottom: -15px;">
-                                    <div class="row" style="margin: 0;">
-                                        <div class="col s7 m9" style="padding: 0;">
-                                            <div class="input-field">
-                                                <input placeholder="Confirm Password" id="password2" type="password" class="validate" required>
-                                                <label for="password2">Confirm Password</label>
-                                            </div>
-                                        </div>
-                                        <div class="col s5 m3" style="padding: 0;">
-                                            <i onclick="showPwd(2)" id="vis2" class="material-icons" style="cursor: pointer; margin-top: 30px;">visibility_off</i>
+                                <div class="row" style="margin: 0;">
+                                    <div class="col s7 m9" style="padding: 0; height: 70px;">
+                                        <div class="input-field">
+                                            <input onkeyup="checkMatchPwd()" placeholder="Confirm Password" id="password2" type="password" class="" required>
+                                            <label for="password2">Confirm Password</label>
                                         </div>
                                     </div>
+                                    <div class="col s5 m3" style="padding: 0;">
+                                        <i onclick="showPwd(2)" id="vis2" class="material-icons" style="cursor: pointer; margin-top: 30px;">visibility_off</i>
+                                    </div>
                                 </div>
+                                <span class="password2-msg" data-error="wrong" data-success="right"></span>
                                 <!-- <div class="input-field">
                                     <input value="" id="password2" type="password" class="validate" required>
                                     <label for="password2">Confirm Password</label>
@@ -161,7 +162,7 @@
                                     <label for="birthdate">Birthdate</label>
                                 </div>
                                 
-                                <div style="text-align: center;"><button type="submit" class="btn">Register</button></div>
+                                <div style="text-align: center;"><a href="member.html"><button type="submit" class="btn">Register</button></a></div>
                                 <!-- <div style="text-align: center;"><a data-target="modal1" class="waves-effect waves-light btn modal-trigger">Register</a></div> -->
                                 </form>
                             </div>
@@ -183,6 +184,40 @@
         var elems2 = document.querySelectorAll('.modal');
         var instances2 = M.Modal.init(elems2, {});
         });
+
+        function checkStrengthPwd(){
+            var pwd = document.querySelector('#password');
+            var msg = document.querySelector('.password-msg');
+            var regex = '/^[A-Za-z0-9]+$/';
+            if (pwd.value.length < 6){
+                msg.innerHTML = '<span style="color: red;">Password is too short!</span>';
+                pwd.classList.remove("valid");
+                pwd.classList.add("invalid");
+            } else if (pwd.value === pwd.value.toLowerCase() || pwd.value.match(regex)) {
+                msg.innerHTML = '<span style="color: red;">Password should contain at least 1 upper case alphabet, numeric, and special character.</span>';
+                pwd.classList.remove("valid");
+                pwd.classList.add("invalid");
+            } else {
+                msg.innerHTML = '';
+                pwd.classList.remove("invalid");
+                pwd.classList.add("valid");
+            }
+        }
+
+        function checkMatchPwd(){
+            var pwd = document.querySelector('#password');
+            var pwd2 = document.querySelector('#password2');
+            var msg = document.querySelector('.password2-msg');
+            if (pwd.value != pwd2.value){
+                msg.innerHTML = '<span style="color: red;">Password not match!</span>';
+                pwd2.classList.remove("valid");
+                pwd2.classList.add("invalid");
+            } else {
+                msg.innerHTML = '';
+                pwd2.classList.remove("invalid");
+                pwd2.classList.add("valid");
+            }
+        }
 
         function generatePassword() {
             var length = 10,
