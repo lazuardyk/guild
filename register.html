@@ -93,7 +93,7 @@
                                     <label for="password2">Confirm Password</label>
                                 </div> -->
                                 <div class="input-field">
-                                    <input value="" id="full_name" type="text" class="validate">
+                                    <input placeholder="Full Name" value="" id="full_name" type="text" class="validate">
                                     <label for="full_name">Full Name</label>
                                 </div>
                                 <div class="input-field">
@@ -117,14 +117,15 @@
                                     <div class="row">
                                         <div class="col s6">
                                             <label>Member Type</label>
-                                            <select name="member-type" class="browser-default">
-                                                <option value="civilian" selected>Civilian</option>
-                                                <option value="member">Guild Member</option>
+                                            <select id="member-type" name="member-type" class="browser-default">
+                                                <option value="Civilian" selected>Civilian</option>
+                                                <option value="Guild Member">Guild Member</option>
+                                                <option value="Manager">Manager</option>
                                             </select>
                                         </div>
                                         <div class="col s6">
                                             <label>Join Period</label>
-                                            <select name="join-period" class="browser-default">
+                                            <select id="join-period" name="join-period" class="browser-default">
                                                 <option value="1" selected>1 Month</option>
                                                 <option value="3">3 Months</option>
                                                 <option value="6">6 Months</option>
@@ -138,7 +139,7 @@
                                         <div class="col s6">
                                             <div class="input-field" style="margin-bottom: 0px;">
                                                 <input onkeyup="checkPhone(1)" placeholder="+628139847255" id="phone" type="text" style="margin-top: 5px;" required>
-                                                <label for="phone1">Handphone Number</label>
+                                                <label for="phone">Handphone Number</label>
                                             </div>
                                             <span class="phone-msg" data-error="wrong" data-success="right"></span>
                                         </div>
@@ -301,6 +302,24 @@
             if(error){
                 event.preventDefault();
                 alert("Please check the error on your account information!");
+            } else {
+                event.preventDefault();
+                var datauname = document.querySelector("#username").value;
+                var dataname = document.querySelector("#full_name").value;
+                var datanik = document.querySelector("#nik").value;
+                var dataaddress = document.querySelector("#address").value;
+                var selecttype = document.querySelector("#member-type");
+                var datatype = selecttype.options[selecttype.selectedIndex].value;
+                var dataphone = document.querySelector("#phone").value;
+
+                sessionStorage.setItem("username", datauname);
+                sessionStorage.setItem("full-name", dataname);
+                sessionStorage.setItem("nik", datanik);
+                sessionStorage.setItem("address", dataaddress);
+                sessionStorage.setItem("type-member", datatype);
+                sessionStorage.setItem("handphone", dataphone);
+
+                window.location.href = "member.html";
             }
         }
       </script>

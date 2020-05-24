@@ -22,7 +22,7 @@
             <li><a href="#home" class="text-nav">Home</a></li>
             <li><a href="#jobs" class="text-nav">Jobs</a></li>
             <li><a href="#profile" class="text-nav">Profile</a></li>
-            <li><a href="login.html" class="text-nav">Log out</a></li>
+            <li><a href="login.html" class="text-nav" onclick="logOut(event)">Log out</a></li>
             <!-- <li><a href="dev.html" class="text-nav">Dev_Info</a></li> -->
             </ul>
         </div>
@@ -45,7 +45,7 @@
                         </div> -->
                     
                     <!-- <p class="font-fira" style="margin-top: 0px; font-size: 20px;"><i class="material-icons vertical-middle">location_on</i> Daksinapati St. 123, NY 21389, United States</p> -->
-                    <p class="font-playfair-bold" style="font-size: 50px; margin-bottom: 0px; margin-top: 0px; color:#50232a;">Welcome, Lazuardy!</p>
+                    <p id="name-1" class="font-playfair-bold" style="font-size: 50px; margin-bottom: 0px; margin-top: 0px; color:#50232a;">Welcome, Lazuardy!</p>
                     <p style="font-family: 'Fira Sans'; font-size: 20px; margin-top: 0px; color:#423c3e; margin-bottom: 0px;">Try to find a job that fit your skill.</p>
                     <div class="row">
                         <div class="input-field col s6 offset-s3">
@@ -68,11 +68,13 @@
                         </div>
                         <div class="card-content font-fira">
                           <p style="font-weight: bold;">Account Information</p>
-                          <p>Name: Lazuardy Khatulistiwa</p>
-                          <p>Type: Member</p>
-                          <p>Address: 4640 Fowler Avenue, GA 30501, US</p>
-                          <p>Phone: +6281395863983</p>
-                          <p>Rank: Bronze</p>
+                          <p id="username">Username: lazuardyk</p>
+                          <p id="name-2">Name: Lazuardy Khatulistiwa</p>
+                          <p id="nik">NIK: 3169801283714756</p>
+                          <p id="type-member">Type: Member</p>
+                          <p id="address">Address: 4640 Fowler Avenue, GA 30501, US</p>
+                          <p id="phone">Phone: +6281395863983</p>
+                          <p id="rank">Rank: Bronze</p>
                           <div style="margin-left: 5px; margin-top: 12px;"><span class="alert-new">You are eligible to rank up to Gold! Fill the <a href="#">form</a>.</span></div>
                         </div>
                       </div>
@@ -169,7 +171,38 @@
         moveRight.next(1);
       }
 
+      function logOut(event){
+        event.preventDefault();
+        sessionStorage.clear();
+        window.location.href = "index.html";
+      }
+
       document.addEventListener('DOMContentLoaded', function() {
+        var name = sessionStorage.getItem("full-name");
+        if (name){
+          var username = sessionStorage.getItem("username");
+          var type = sessionStorage.getItem("type-member");
+          var address = sessionStorage.getItem("address");
+          var handphone = sessionStorage.getItem("handphone");
+          var nik = sessionStorage.getItem("nik");
+
+          var htmlname = document.querySelector('#name-1');
+          var htmlname2 = document.querySelector('#name-2');
+          var htmluname = document.querySelector('#username');
+          var htmltype = document.querySelector('#type-member');
+          var htmladdress = document.querySelector('#address');
+          var htmlphone = document.querySelector('#phone');
+          var htmlnik = document.querySelector('#nik');
+          
+          var arrname = name.split(" ")
+          htmlname.textContent = "Welcome, "+arrname[0]+"!";
+          htmlname2.textContent = "Name: "+name;
+          htmluname.textContent = "Username: "+username;
+          htmltype.textContent = "Type: "+type;
+          htmladdress.textContent = "Address: "+address;
+          htmlphone.textContent = "Phone: "+handphone;
+          htmlnik.textContent = "NIK: "+nik;
+        }
         var elems = document.querySelectorAll('.scrollspy');
         var instances = M.ScrollSpy.init(elems, {});
         var elems2 = document.querySelectorAll('.sidenav');
