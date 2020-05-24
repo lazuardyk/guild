@@ -186,7 +186,10 @@
         var elems2 = document.querySelectorAll('.modal');
         var instances2 = M.Modal.init(elems2, {});
         var name = sessionStorage.getItem("name");
-        alert(name);
+        if (name){
+            var fullname = document.querySelector('#full_name');
+            fullname.setAttribute('value',name);
+        }
         });
 
         function checkStrengthPwd(){
