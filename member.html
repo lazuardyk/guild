@@ -34,118 +34,99 @@
           <li><a href="login.html" class="text-nav" onclick="logOut(event)">Log out</a></li>
         </ul>
         <div class="scrollspy" id="home">
-            <div class="row" style="padding-bottom: 40px;">
-                <div class="col s12 m6">
-                  <!-- Modal Structure -->
-                    <div id="modal-edit" class="modal">
-                      <div class="modal-content" style="text-align:center;">
-                      <h4>Edit Profile</h4>
-                      <div class="row">
-                        <div class="col s12">
-                          <div class="input-field">
-                            <input placeholder="New Full Name" id="fullname-new" type="text" class="validate">
-                            <label for="fullname-new">New Full Name</label>
-                          </div>
-                          <div class="input-field">
-                            <input placeholder="New Address" id="address-new" type="text" class="validate">
-                            <label for="address-new">New Address</label>
-                          </div>
-                          <div class="input-field">
-                            <input placeholder="New Phone" id="phone-new" type="text" class="validate">
-                            <label for="phone-new">New Phone</label>
-                          </div>
-                        </div>
-                      </div>
+          <div class="row" style="margin: 0;">
+            <div class="col s12">
+              <!-- Modal Structure -->
+              <div id="modal-edit" class="modal">
+                <div class="modal-content" style="text-align:center;">
+                <h4>Edit Profile</h4>
+                <div class="row">
+                  <div class="col s12">
+                    <div class="input-field">
+                      <input placeholder="New Full Name" id="fullname-new" type="text" class="validate">
+                      <label for="fullname-new">New Full Name</label>
                     </div>
-                      <div style="text-align:center; margin-bottom: 15px;">
-                      <a class="modal-close waves-effect waves-green btn">Cancel</a>
-                      <a class="modal-close waves-effect waves-green btn">Submit</a>
-                      </div>
+                    <div class="input-field">
+                      <input placeholder="New Address" id="address-new" type="text" class="validate">
+                      <label for="address-new">New Address</label>
                     </div>
-
-                    <div id="modal-form" class="modal">
-                      <div class="modal-content" style="text-align:center;">
-                      <h4>Upgrade Rank Form</h4>
-                      <div class="row">
-                        <div class="col s12">
-                          <div class="input-field">
-                            <input placeholder="Full Name" id="fullname-form" type="text" class="validate">
-                            <label for="fullname-form">Full Name</label>
-                          </div>
-                          <div class="input-field">
-                            <input placeholder="Email" id="email-form" type="email" class="validate">
-                            <label for="email-form">E-mail</label>
-                          </div>
-                          <div class="input-field">
-                            <textarea id="message" class="materialize-textarea"></textarea>
-                            <label for="message">Message</label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                      <div style="text-align:center; margin-bottom: 15px;">
-                      <a class="modal-close waves-effect waves-green btn">Cancel</a>
-                      <a class="modal-close waves-effect waves-green btn">Submit</a>
-                      </div>
-                    </div>
-
-                    <div id="modal-job" class="modal">
-                      <div class="modal-content" style="text-align:center;">
-                      <h4>New Job</h4>
-                      <div class="row">
-                        <div class="col s12">
-                          <div class="input-field">
-                            <input placeholder="Job Title" id="job-title" type="text" class="validate">
-                            <label for="job-title">Job Title</label>
-                          </div>
-                          <div class="input-field">
-                            <input placeholder="Job Description" id="job-description" type="email" class="validate">
-                            <label for="job-description">Job Description</label>
-                          </div>
-                          <div class="input-field">
-                            <input placeholder="5" id="job-reward" type="number" class="validate">
-                            <label for="job-reward">Job Reward ($ in USD) </label>
-                          </div>
-                          <div style="text-align: left;">
-                          <label>Job Required Rank</label>
-                          <select id="job-rank" name="job-rank" class="browser-default" style="margin-top: 5px;">
-                              <option value="Iron" selected>Iron</option>
-                              <option value="Silver">Silver</option>
-                              <option value="Gold">Gold</option>
-                              <option value="Platinum">Platinum</option>
-                          </select>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                      <div style="text-align:center; margin-bottom: 15px;">
-                      <a class="modal-close waves-effect waves-green btn">Cancel</a>
-                      <a class="modal-close waves-effect waves-green btn">Submit</a>
-                      </div>
-                    </div>
-
-                    <div style="margin-bottom: 0px; margin-top: 80px;" class="center-align">
-                        <!-- <img class="vertical-middle" src="images/logo.png" alt="Logo" width="150">
-                        <div class="vertical-middle" style="display: inline-block; margin-top: -55px;">
-                            <p class="font-bebas" style="font-size: 70px; margin-bottom:0px; ">ERUDITE</p>
-                        </div> -->
-                    
-                    <!-- <p class="font-fira" style="margin-top: 0px; font-size: 20px;"><i class="material-icons vertical-middle">location_on</i> Daksinapati St. 123, NY 21389, United States</p> -->
-                    <p id="name-1" class="font-playfair-bold" style="font-size: 50px; margin-bottom: 0px; margin-top: 0px; color:#50232a;">Welcome, Lazuardy!</p>
-                    <p style="font-family: 'Fira Sans'; font-size: 20px; margin-top: 0px; color:#423c3e; margin-bottom: 0px;">Try to find a job that fit your skill.</p>
-                    <div class="row">
-                        <div class="input-field col s6 offset-s3">
-                          <i class="material-icons prefix">search</i>
-                          <input id="icon_prefix" type="text" class="validate">
-                          <label for="icon_prefix">Search a Job</label>
-                        </div>
-                        <div class="col s12">
-                            <button class="button-join waves-effect waves-light">Search</button>
-                        </div>
+                    <div class="input-field">
+                      <input placeholder="New Phone" id="phone-new" type="text" class="validate">
+                      <label for="phone-new">New Phone</label>
                     </div>
                   </div>
                 </div>
-                <div class="col hide-on-small-only m4 offset-m1">
+              </div>
+                <div style="text-align:center; margin-bottom: 15px;">
+                <a class="modal-close waves-effect waves-green btn">Cancel</a>
+                <a class="modal-close waves-effect waves-green btn">Submit</a>
+                </div>
+              </div>
+
+              <div id="modal-form" class="modal">
+                <div class="modal-content" style="text-align:center;">
+                <h4>Upgrade Rank Form</h4>
+                <div class="row">
+                  <div class="col s12">
+                    <div class="input-field">
+                      <input placeholder="Full Name" id="fullname-form" type="text" class="validate">
+                      <label for="fullname-form">Full Name</label>
+                    </div>
+                    <div class="input-field">
+                      <input placeholder="Email" id="email-form" type="email" class="validate">
+                      <label for="email-form">E-mail</label>
+                    </div>
+                    <div class="input-field">
+                      <textarea id="message" class="materialize-textarea"></textarea>
+                      <label for="message">Message</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div style="text-align:center; margin-bottom: 15px;">
+                <a class="modal-close waves-effect waves-green btn">Cancel</a>
+                <a class="modal-close waves-effect waves-green btn">Submit</a>
+                </div>
+              </div>
+
+              <div id="modal-job" class="modal">
+                <div class="modal-content" style="text-align:center;">
+                <h4>New Job</h4>
+                <div class="row">
+                  <div class="col s12">
+                    <div class="input-field">
+                      <input placeholder="Job Title" id="job-title" type="text" class="validate">
+                      <label for="job-title">Job Title</label>
+                    </div>
+                    <div class="input-field">
+                      <input placeholder="Job Description" id="job-description" type="email" class="validate">
+                      <label for="job-description">Job Description</label>
+                    </div>
+                    <div class="input-field">
+                      <input placeholder="5" id="job-reward" type="number" class="validate">
+                      <label for="job-reward">Job Reward ($ in USD) </label>
+                    </div>
+                    <div style="text-align: left;">
+                    <label>Job Required Rank</label>
+                    <select id="job-rank" name="job-rank" class="browser-default" style="margin-top: 5px;">
+                        <option value="Iron" selected>Iron</option>
+                        <option value="Silver">Silver</option>
+                        <option value="Gold">Gold</option>
+                        <option value="Platinum">Platinum</option>
+                    </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div style="text-align:center; margin-bottom: 15px;">
+                <a class="modal-close waves-effect waves-green btn">Cancel</a>
+                <a class="modal-close waves-effect waves-green btn">Submit</a>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div class="row" style="padding-bottom: 20px; margin-top: 20px;">
+                <div class="col s12 m4 offset-m1">
                     <div class="card" style="border-radius: 0px;">
                         <div class="card-image">
                           <img src="images/man1.png" style="width: 200px; margin: auto;" class="circle">
@@ -161,9 +142,26 @@
                           <p id="address">Address: 4640 Fowler Avenue, GA 30501, US</p>
                           <p id="phone">Phone: +6281395863345</p>
                           <p id="rank">Rank: Iron</p>
-                          <div style="margin-left: 5px; margin-top: 12px;"><span class="alert-new">You are eligible to rank up to Gold! Fill the <a data-target="modal-form" href="#" class="modal-trigger">form</a>.</span></div>
+                          <div class="notice" style="margin-top: 12px; cursor:pointer; text-align: center;"><span class="alert-new">You are eligible to rank up to Gold! Fill the <a data-target="modal-form" href="#" class="modal-trigger">form</a>.</span></div>
                         </div>
                       </div>
+                </div>
+
+                <div class="col hide-on-small-only m6" style="margin-left: 30px;">
+                  <div style="margin-bottom: 0px; margin-top: 80px;" class="center-align">
+                  <p id="name-1" class="font-playfair-bold" style="font-size: 50px; margin-bottom: 0px; margin-top: 0px; color:#50232a;">Welcome, Lazuardy!</p>
+                  <p style="font-family: 'Fira Sans'; font-size: 20px; margin-top: 0px; color:#423c3e; margin-bottom: 0px;">Try to find a job that fit your skill.</p>
+                  <div class="row">
+                      <div class="input-field col s6 offset-s3">
+                        <i class="material-icons prefix">search</i>
+                        <input id="icon_prefix" type="text" class="validate">
+                        <label for="icon_prefix">Search a Job</label>
+                      </div>
+                      <div class="col s12">
+                          <button class="button-join waves-effect waves-light">Search</button>
+                      </div>
+                  </div>
+                </div>
                 </div>
             </div>
         </div>

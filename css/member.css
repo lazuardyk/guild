@@ -1,3 +1,9 @@
+@media only screen and (max-width: 768px) {
+    .notice {
+        font-size: 12px;
+    }
+  }
+
 .button-join {
     border: 2px solid #C1272D;
     background-color: #C1272D;
