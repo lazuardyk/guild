@@ -93,7 +93,7 @@
                                     <label for="password2">Confirm Password</label>
                                 </div> -->
                                 <div class="input-field">
-                                    <input value="Lazuardy Khatulistiwa" id="full_name" type="text" class="validate">
+                                    <input value="" id="full_name" type="text" class="validate">
                                     <label for="full_name">Full Name</label>
                                 </div>
                                 <div class="input-field">
@@ -185,6 +185,8 @@
 
         var elems2 = document.querySelectorAll('.modal');
         var instances2 = M.Modal.init(elems2, {});
+        var name = sessionStorage.getItem("name");
+        alert(name);
         });
 
         function checkStrengthPwd(){
@@ -262,7 +264,7 @@
             var pwd = document.querySelector('#password');
             pwd.value = '';
             pwd.value = generatePassword();
-            showPwd();
+            showPwd(1);
         }
 
         function checkPhone(n){
