@@ -1,9 +1,122 @@
-header, main, footer {
-    padding-left: 300px;
+@media only screen and (max-width: 768px) {
+    .notice {
+        font-size: 11px;
+    }
   }
 
-@media only screen and (max-width : 992px) {
-    header, main, footer {
-        padding-left: 0;
+.button-join {
+    border: 2px solid #C1272D;
+    background-color: #C1272D;
+    color: white;
+    padding: 2px 35px;
+    font-size: 20px;
+    font-family: 'Fira Sans';
+    cursor: pointer;
+    border-color: #C1272D;
+    border-radius: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .button-about {
+      border: 2px solid #50232a;
+      background-color: transparent;
+      color: #50232a;
+      padding: 5px 30px;
+      font-size: 25px;
+      font-family: 'Fira Sans';
+      cursor: pointer;
+      border-radius: 15px;
+      margin-bottom: 30px;
     }
-}
+  
+  .button-join:focus{
+      background-color: #C1272D !important;
+  }
+  
+  .button-about:focus {
+      background-color: transparent !important;
+  }
+  
+  .bg-hijau {
+      background: rgba(57, 181, 74, 0.3);
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  
+  #our-jobs {
+      border: 2px solid #C1272D;
+      background-color: white;
+      color: #C1272D;
+      padding: 4px 15px;
+      font-size: 30px;
+      font-family: 'Bebas Neue';
+      border-color: #f44336;
+  }
+  
+  #tombol-tambah {
+      border: 2px solid #22B573;
+      background-color: white;
+      color: #22B573;
+      padding: 0px 15px;
+      border-color: #22B573;
+      font-family: 'Fira Sans';
+      border-radius: 50%;
+      font-size: 30px;
+      font-weight: bold;
+      cursor: pointer;
+  }
+  
+  .card {
+      border-radius: 10%;
+  }
+  
+  .button-take {
+    background-color:#C1272D;
+    color: white;
+    padding: 5px 30px;
+    font-size: 15px;
+    font-family: 'Fira Sans';
+    cursor: pointer;
+    border-radius: 50px;
+    text-align: center;
+  }
+  
+  .pagination {
+      text-align: center;
+      background-color: #C1272D !important;
+      display: inline-block !important;
+      color: white !important;
+      border-radius: 15px !important;
+  }
+  
+  .active {
+      color: #22B573;
+  }
+  
+  table, th ,td {
+      background: rgba(119, 192, 67, 0.3) !important;
+      border: 1px solid #009245 !important;
+  }
+  
+  table {
+      border-collapse:separate;
+      border-radius: 5px;
+      width: 100%;
+  }
+  
+  td {
+      padding: 7px;
+  }
+  
+  .alert-new {
+      border: 1px solid red;
+      padding: 5px 20px;
+      border-radius: 8px;
+      background-color: rgba(255, 0, 0, 0.2);
+      color: #C1272D;
+  }
+  
+  .carousel {
+      min-height: 195px;
+      max-height: 195px;
+  }

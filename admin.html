@@ -13,32 +13,412 @@
     <title>Laz Guild</title>
   </head>
   <body>
-    <div class="row">
-      <div class="col m3">
-        <ul id="slide-out" class="sidenav sidenav-fixed">
-            <!-- <div class="center-align"><img src="images/logo.png" alt="Logo" width="70" class="vertical-middle"><span style="font-size: 30px;" class="font-bebas vertical-middle">Erudite</span></a></div> -->
-            <li><div class="user-view bg-hijau">
-                <img class="circle" src="images/user.png"></a>
-                <span class="black-text name">John Doe</span></a>
-                <span class="black-text email">jdandturk@gmail.com</span></a>
-            </div></li>
-            <li><a href="#!">First Sidebar Link</a></li>
-            <li><a href="#!">Second Sidebar Link</a></li>
+    <div class="bg-hijau">
+        <nav class="transparent">
+        <div class="nav-wrapper">
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <a href="member.html" class="brand-logo"><img src="images/logo.svg" style="margin: 8px;" alt="Logo" width="54px"><span>Erudite</span></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#home" class="text-nav">Home</a></li>
+            <li><a href="#memberlist" class="text-nav">Members</a></li>
+            <li><a href="#jobs" class="text-nav">Jobs</a></li>
+            <li><a href="login.html" class="text-nav" onclick="logOut(event)">Log out</a></li>
+            <!-- <li><a href="dev.html" class="text-nav">Dev_Info</a></li> -->
+            </ul>
+        </div>
+        </nav>
+        <ul class="sidenav" id="mobile-nav">
+          <li><a href="#home" class="text-nav">Home</a></li>
+          <li><a href="#memberlist" class="text-nav">Members</a></li>
+          <li><a href="#jobs" class="text-nav">Jobs</a></li>
+          <li><a href="login.html" class="text-nav" onclick="logOut(event)">Log out</a></li>
         </ul>
-      </div>
-      <div class="col m9">
+        <div class="scrollspy" id="home">
+          <div class="row" style="margin: 0;">
+            <div class="col s12">
+              <!-- Modal Structure -->
+              <div id="modal-edit" class="modal">
+                <div class="modal-content" style="text-align:center;">
+                <h4>Edit Profile</h4>
+                <div class="row">
+                  <div class="col s12">
+                    <div class="input-field">
+                      <input placeholder="New Full Name" id="fullname-new" type="text" class="validate">
+                      <label for="fullname-new">New Full Name</label>
+                    </div>
+                    <div class="input-field">
+                      <input placeholder="New Address" id="address-new" type="text" class="validate">
+                      <label for="address-new">New Address</label>
+                    </div>
+                    <div class="input-field">
+                      <input placeholder="New Phone" id="phone-new" type="text" class="validate">
+                      <label for="phone-new">New Phone</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div style="text-align:center; margin-bottom: 15px;">
+                <a class="modal-close waves-effect waves-green btn">Cancel</a>
+                <a class="modal-close waves-effect waves-green btn">Submit</a>
+                </div>
+              </div>
+
+              <div id="modal-form" class="modal">
+                <div class="modal-content" style="text-align:center;">
+                <h4>Upgrade Rank Form</h4>
+                <div class="row">
+                  <div class="col s12">
+                    <div class="input-field">
+                      <input placeholder="Full Name" id="fullname-form" type="text" class="validate">
+                      <label for="fullname-form">Full Name</label>
+                    </div>
+                    <div class="input-field">
+                      <input placeholder="Email" id="email-form" type="email" class="validate">
+                      <label for="email-form">E-mail</label>
+                    </div>
+                    <div class="input-field">
+                      <textarea id="message" class="materialize-textarea"></textarea>
+                      <label for="message">Message</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div style="text-align:center; margin-bottom: 15px;">
+                <a class="modal-close waves-effect waves-green btn">Cancel</a>
+                <a class="modal-close waves-effect waves-green btn">Submit</a>
+                </div>
+              </div>
+
+              <div id="modal-job" class="modal">
+                <div class="modal-content" style="text-align:center;">
+                <h4>New Job</h4>
+                <div class="row">
+                  <div class="col s12">
+                    <div class="input-field">
+                      <input placeholder="Job Title" id="job-title" type="text" class="validate">
+                      <label for="job-title">Job Title</label>
+                    </div>
+                    <div class="input-field">
+                      <input placeholder="Job Description" id="job-description" type="email" class="validate">
+                      <label for="job-description">Job Description</label>
+                    </div>
+                    <div class="input-field">
+                      <input placeholder="5" id="job-reward" type="number" class="validate">
+                      <label for="job-reward">Job Reward ($ in USD) </label>
+                    </div>
+                    <div style="text-align: left;">
+                    <label>Job Required Rank</label>
+                    <select id="job-rank" name="job-rank" class="browser-default" style="margin-top: 5px;">
+                        <option value="Iron" selected>Iron</option>
+                        <option value="Silver">Silver</option>
+                        <option value="Gold">Gold</option>
+                        <option value="Platinum">Platinum</option>
+                    </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div style="text-align:center; margin-bottom: 15px;">
+                <a class="modal-close waves-effect waves-green btn">Cancel</a>
+                <a class="modal-close waves-effect waves-green btn">Submit</a>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div class="row" style="padding-bottom: 20px; margin-top: 20px;">
+                <div class="col s12 m4 offset-m1">
+                    <div class="card" style="border-radius: 0px;">
+                        <div class="card-image">
+                          <img src="images/man1.png" style="width: 200px; margin: auto;" class="circle">
+                          <!-- <span class="card-title">Card Title</span> -->
+                          <a data-target="modal-edit" class="btn-floating halfway-fab waves-effect waves-light red modal-trigger"><i class="material-icons">edit</i></a>
+                        </div>
+                        <div class="card-content font-fira">
+                          <p style="font-weight: bold; text-align: center;">Administrator</p>
+                          <p id="username">Username: lazuardyk</p>
+                          <p id="name-2">Name: Lazuardy Khatulistiwa</p>
+                          <p id="nik">NIK: 3169801283714756</p>
+                          <p id="address">Address: 4640 Fowler Avenue, GA 30501, US</p>
+                          <p id="phone">Phone: +6281395863345</p>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="col hide-on-small-only m6" style="margin-left: 30px;">
+                  <div style="margin-bottom: 0px; margin-top: 60px;" class="center-align">
+                  <p id="name-1" class="font-playfair-bold" style="font-size: 50px; margin-bottom: 0px; margin-top: 0px; color:#50232a;">Welcome, Lazuardy!</p>
+                  <p style="font-family: 'Fira Sans'; font-size: 20px; margin-top: 15px; color:#423c3e; margin-bottom: 5px;">Web Statistics Overview</p>
+                  <div class="row">
+                    <div class="card col s3" style="">
+                      <div class="card-content font-fira">
+                        <p style="margin: 0; font-size: 25px; color: green;"><b>1,265,019</b></p>
+                        <p style="margin: 0; font-size: 20px; color: green;">Members</p>
+                      </div>
+                    </div>
+                    <div class="card col s3 offset-m1">
+                      <div class="card-content font-fira">
+                        <p style="margin: 0; font-size: 25px; color: green;"><b>623,240</b></p>
+                        <p style="margin: 0; font-size: 20px; color: green;">Jobs</p>
+                      </div>
+                    </div>
+                    <div class="card col s3 offset-m1">
+                      <div class="card-content font-fira">
+                        <p style="margin: 0; font-size: 25px; color: green;"><b>424,529$</b></p>
+                        <p style="margin: 0; font-size: 20px; color: green;">Earnings</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 center-align">
+            <span id="our-jobs">Member List</span>
+            <div style="overflow-x:auto;">
+              <table class="centered scrollspy" id="memberlist" style="margin: auto; margin-top: 25px; margin-bottom: 15px;">
+                <thead>
+                  <tr>
+                      <th>No</th>
+                      <th>Username</th>
+                      <th>Full Name</th>
+                      <th>E-mail</th>
+                      <th>Rank</th>
+                      <th>Jobs Taken</th>
+                  </tr>
+                </thead>
         
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>royalknight</td>
+                    <td>Romanzo Gonzales</td>
+                    <td>royalknight@gmail.com</td>
+                    <td>Platinum</td>
+                    <td>113892</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>magina88</td>
+                    <td>Diana Mcclure</td>
+                    <td>magina88@gmail.com</td>
+                    <td>Platinum</td>
+                    <td>100234</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>pewdiepie</td>
+                    <td>Bree Ryan</td>
+                    <td>pewdiepie@gmail.com</td>
+                    <td>Platinum</td>
+                    <td>97235</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>cherryxd24</td>
+                    <td>Jiya Cullen</td>
+                    <td>cherryxd24@gmail.com</td>
+                    <td>Platinum</td>
+                    <td>87457</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>noobies212</td>
+                    <td>Aviana Huff</td>
+                    <td>noobies212@gmail.com</td>
+                    <td>Platinum</td>
+                    <td>85712</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>exmachina</td>
+                    <td>Arif Branch</td>
+                    <td>exmachina@gmail.com</td>
+                    <td>Platinum</td>
+                    <td>74877</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>richnoobs</td>
+                    <td>Daisy-Mae Couch</td>
+                    <td>richnoobs@gmail.com</td>
+                    <td>Platinum</td>
+                    <td>72038</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>christoper7</td>
+                    <td>Farzana Haines</td>
+                    <td>christoper7@gmail.com</td>
+                    <td>Platinum</td>
+                    <td>70005</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>zeeplyn123</td>
+                    <td>Woody Casey</td>
+                    <td>zeeplyn123@gmail.com</td>
+                    <td>Platinum</td>
+                    <td>67329</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>crazygamer12</td>
+                    <td>Gracie-Mai Williams</td>
+                    <td>crazygamer12@gmail.com</td>
+                    <td>Platinum</td>
+                    <td>42715</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <ul class="pagination">
+            <li class="disabled"><a href="#!"><span style="color: white;"><i class="material-icons">chevron_left</i></span></a></li>
+            <li class="active"><a href="#!">1</a></li>
+            <li class="waves-effect"><a href="#!"><span style="color: white;">2</span></a></li>
+            <li class="waves-effect"><a href="#!"><span style="color: white;">3</span></a></li>
+            <li class="waves-effect"><a href="#!"><span style="color: white;">4</span></a></li>
+            <li class="waves-effect"><a href="#!"><span style="color: white;">5</span></a></li>
+            <li class="waves-effect"><a href="#!"><span style="color: white;"><i class="material-icons">chevron_right</i></span></a></li>
+          </ul>
+        </div>
+
+        <div class="row">
+            <div class="col s12 center-align" style="position:relative;">
+                <span id="our-jobs">Job List</span>
+                <a data-target="modal-job" class="modal-trigger"><span id="tombol-tambah" style="position: absolute; right: 0;">+</span></a>
+            </div>
+          </div>
+          <div class="row scrollspy" id="jobs">
+            <div class="col s12 m3">
+              <div class="card green darken-2 z-depth-3">
+                <div class="card-content white-text font-fira">
+                  <span class="card-title center-align" style="font-size: 22px;">Kill 10 Enemy</span>
+                  <p style="font-family: Georgia; opacity: 80%;">Kill 10 enemy heroes who are in Penalty Zone in total.</p>
+                  <p style="margin-top: 10px;">Rank required: <span style="color: yellow;">Platinum</span></p>
+                  <p>Prize: <span style="color: yellow;">500$</span></p>
+                  <p>Issuer: <span style="color: yellow;">royalknight</span></p>
+                  <p>Time limit: <span style="color: yellow;">24 hours</span></p>
+                  <span class="button-take" style="display: block; margin: 0px 15px; margin-top: 15px;">Take</span>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m3">
+              <div class="card green darken-2 z-depth-3">
+                <div class="card-content white-text font-fira">
+                  <span class="card-title center-align" style="font-size: 22px;">Solidarity</span>
+                  <p style="font-family: Georgia; opacity: 80%;">Team up with me and win 2 matches. Fight them all</p>
+                  <p style="margin-top: 10px;">Rank required: <span style="color: yellow;">Gold</span></p>
+                  <p>Prize: <span style="color: yellow;">100$</span></p>
+                  <p>Issuer: <span style="color: yellow;">pewdiepie</span></p>
+                  <p>Time limit: <span style="color: yellow;">5 hours</span></p>
+                  <span class="button-take" style="display: block; margin: 0px 15px; margin-top: 15px;">Take</span>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m3">
+              <div class="card green darken-2 z-depth-3">
+                <div class="card-content white-text font-fira">
+                  <span class="card-title center-align" style="font-size: 22px;">Defeat Invaders</span>
+                  <p style="font-family: Georgia; opacity: 80%;">Use enhanced basic attacks gained from the Passive.</p>
+                  <p style="margin-top: 10px;">Rank required: <span style="color: yellow;">Silver</span></p>
+                  <p>Prize: <span style="color: yellow;">299$</span></p>
+                  <p>Issuer: <span style="color: yellow;">zeeplyn123</span></p>
+                  <p>Time limit: <span style="color: yellow;">8 hours</span></p>
+                  <span class="button-take" style="display: block; margin: 0px 15px; margin-top: 15px;">Take</span>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m3">
+              <div class="card green darken-2 z-depth-3">
+                <div class="card-content white-text font-fira">
+                  <span class="card-title center-align" style="font-size: 22px;">Defend Invasion</span>
+                  <p style="font-family: Georgia; opacity: 80%;">Win a match while the First Blood is achieved by the enemy team.</p>
+                  <p style="margin-top: 10px;">Rank required: <span style="color: yellow;">Iron</span></p>
+                  <p>Prize: <span style="color: yellow;">300$</span></p>
+                  <p>Issuer: <span style="color: yellow;">crazygamer12</span></p>
+                  <p>Time limit: <span style="color: yellow;">12 hours</span></p>
+                  <span class="button-take" style="display: block; margin: 0px 15px; margin-top: 15px;">Take</span>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <ul class="pagination">
+            <li class="disabled"><a href="#!"><span style="color: white;"><i class="material-icons">chevron_left</i></span></a></li>
+            <li class="active"><a href="#!">1</a></li>
+            <li class="waves-effect"><a href="#!"><span style="color: white;">2</span></a></li>
+            <li class="waves-effect"><a href="#!"><span style="color: white;">3</span></a></li>
+            <li class="waves-effect"><a href="#!"><span style="color: white;">4</span></a></li>
+            <li class="waves-effect"><a href="#!"><span style="color: white;">5</span></a></li>
+            <li class="waves-effect"><a href="#!"><span style="color: white;"><i class="material-icons">chevron_right</i></span></a></li>
+          </ul>
+    </div>
+
+    <div class="bg-hijau">
+      <div class="wrap font-fira">
+        <span class="valign-wrapper" style="margin-left: 20px;">Copyright © Erudite 2020</span>
+        <span>Follow us <a href="#"><img src="images/icon-fb.png" class="vertical-middle" width="15%"> </a><a href="#"><img src="images/icon-tw.png" class="vertical-middle" width="16%"></a> <a href="#"><img src="images/icon-ig.png" class="vertical-middle" width="17%"></a></span>
       </div>
     </div>
+
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+      function moveNextCarousel() {
+        var elems = document.querySelector('.carousel.carousel-slider');
+        var moveRight = M.Carousel.getInstance(elems);
+        moveRight.next(1);
+      }
+
+      function logOut(event){
+        event.preventDefault();
+        sessionStorage.clear();
+        window.location.href = "index.html";
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var name = sessionStorage.getItem("full-name");
+        if (name){
+          var username = sessionStorage.getItem("username");
+          var type = sessionStorage.getItem("type-member");
+          var address = sessionStorage.getItem("address");
+          var handphone = sessionStorage.getItem("handphone");
+          var nik = sessionStorage.getItem("nik");
+
+          var htmlname = document.querySelector('#name-1');
+          var htmlname2 = document.querySelector('#name-2');
+          var htmluname = document.querySelector('#username');
+          var htmltype = document.querySelector('#type-member');
+          var htmladdress = document.querySelector('#address');
+          var htmlphone = document.querySelector('#phone');
+          var htmlnik = document.querySelector('#nik');
+          
+          var arrname = name.split(" ")
+          htmlname.textContent = "Welcome, "+arrname[0]+"!";
+          htmlname2.textContent = "Name: "+name;
+          htmluname.textContent = "Username: "+username;
+          htmltype.textContent = "Type: "+type;
+          htmladdress.textContent = "Address: "+address;
+          htmlphone.textContent = "Phone: "+handphone;
+          htmlnik.textContent = "NIK: "+nik;
+        }
         var elems = document.querySelectorAll('.scrollspy');
         var instances = M.ScrollSpy.init(elems, {});
         var elems2 = document.querySelectorAll('.sidenav');
         var instances2 = M.Sidenav.init(elems2, {});
-        });
+        var elems3 = document.querySelectorAll('.carousel');
+        var instances3 = M.Carousel.init(elems3, {'fullWidth':'true', 'indicators':'true'});
+        var elems4 = document.querySelectorAll('.modal');
+        var instances4 = M.Modal.init(elems4, {});
+
+        setTimeout(() => {
+          moveNextCarousel();
+        }, 2000);
+      });
     </script>
   </body>
 </html>
