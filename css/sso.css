@@ -11,6 +11,11 @@
         }
 }
 
+@media only screen and (max-width: 768px) {
+    .card {
+        margin-top: 30px !important;
+    }
+  }
 
 html, body, .container {
     height: 100%;
