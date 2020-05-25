@@ -9,7 +9,7 @@
       <link type="text/css" rel="stylesheet" href="css/register.css" />
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <title>Register - Erudite</title>
+      <title>Erudite - Register</title>
     </head>
 
     <body class="bg-hijau">
@@ -165,7 +165,7 @@
                                     <label for="birthdate">Birthdate</label>
                                 </div>
                                 
-                                <div style="text-align: center;"><a href="member.html" onclick="checkInput(event)"><button type="submit" class="btn">Register</button></a></div>
+                                <div style="text-align: center;"><button type="submit" class="btn" onclick="checkInput(event)">Register</button></div>
                                 <!-- <div style="text-align: center;"><a data-target="modal1" class="waves-effect waves-light btn modal-trigger">Register</a></div> -->
                                 </form>
                             </div>
@@ -174,7 +174,7 @@
                 </div>
             </div>
         <div class="wrap font-fira">
-            <span class="valign-wrapper" style="margin-left: 20px;">Copyright © Laz Guild 2020</span>
+            <span class="valign-wrapper" style="margin-left: 20px;">Copyright © Erudite 2020</span>
             <span>Follow us <a href="#"><img src="images/icon-fb.png" class="vertical-middle" width="15%"> </a><a href="#"><img src="images/icon-tw.png" class="vertical-middle" width="16%"></a> <a href="#"><img src="images/icon-ig.png" class="vertical-middle" width="17%"></a></span>
         </div>
       <!--JavaScript at end of body for optimized loading-->
@@ -186,6 +186,10 @@
 
         var elems2 = document.querySelectorAll('.modal');
         var instances2 = M.Modal.init(elems2, {});
+
+        var elems3 = document.querySelectorAll('.sidenav');
+        var instances3 = M.Sidenav.init(elems3, {});
+
         var name = sessionStorage.getItem("name");
         if (name){
             var fullname = document.querySelector('#full_name');
@@ -273,37 +277,40 @@
 
         function checkPhone(n){
             if (n == 1){
-                var phone = document.querySelector('#phone').value;
+                var selectphone = document.querySelector('#phone')
+                var phone = selectphone.value;
                 var msg = document.querySelector('.phone-msg');
             } else if (n == 2){
-                var phone = document.querySelector('#phone2').value;
+                var selectphone = document.querySelector('#phone2')
+                var phone = selectphone.value;
                 var msg = document.querySelector('.phone2-msg');
             }
             if (phone.match(/^\+[1-9]{1}[0-9]{3,14}$/)){
                 msg.innerHTML = '';
-                phone.classList.remove("invalid");
-                phone.classList.add("valid");
+                selectphone.classList.remove("invalid");
+                selectphone.classList.add("valid");
             } else {
                 msg.innerHTML = '<span style="color: red;">Phone number should contain country and area code.</span>';
-                phone.classList.remove("valid");
-                phone.classList.add("invalid");
+                selectphone.classList.remove("valid");
+                selectphone.classList.add("invalid");
             }
         }
 
         function checkInput(event){
             var input = document.querySelectorAll("input");
-            // alert(input.length);
             var error = false;
             input.forEach(function(item, index, list){
-                if (item.classList.contains("invalid")){
-                    error = true;
+                if (item.classList.contains("invalid") || item.value == ""){
+                    if (item.id != "phone2"){
+                        error = true;
+                    }
                 }
             });
             if(error){
                 event.preventDefault();
-                alert("Please check the error on your account information!");
+                alert("Registration error. Make sure your information is valid!");
+                
             } else {
-                event.preventDefault();
                 var datauname = document.querySelector("#username").value;
                 var dataname = document.querySelector("#full_name").value;
                 var datanik = document.querySelector("#nik").value;
