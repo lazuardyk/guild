@@ -11,16 +11,6 @@
         }
 }
 
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-
-main {
-    flex: 1 0 auto;
-}
-
 @media only screen and (max-width: 768px) {
     .card {
         margin-top: 30px !important;
@@ -50,6 +40,17 @@ main {
     font-family: 'Fira Sans';
     background-color: white;
     cursor: pointer;
+}
+
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 .tombol-gg {
