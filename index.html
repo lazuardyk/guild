@@ -89,6 +89,16 @@
               <p style="font-weight: bold; font-size: 14px; margin-bottom: 0px; margin-top: 3px;">Billy Davidson</p>
               <p style="font-size: 14px; margin-top: 0px;">Chief Executive Officer</p>
             </div>
+            <div class="carousel-item red white-text font-fira" href="#one!">
+              <img src="images/man3.png" class="circle" alt="" style="width: 80px; height:80px; margin-top: 15px;">
+              <p style="font-weight: bold; font-size: 14px; margin-bottom: 0px; margin-top: 3px;">Mark Ruffalo</p>
+              <p style="font-size: 14px; margin-top: 0px;">Marketing Manager</p>
+            </div>
+            <div class="carousel-item red white-text font-fira" href="#one!">
+              <img src="images/man4.png" class="circle" alt="" style="width: 80px; height:80px; margin-top: 15px;">
+              <p style="font-weight: bold; font-size: 14px; margin-bottom: 0px; margin-top: 3px;">Rifaldo Benzeles</p>
+              <p style="font-size: 14px; margin-top: 0px;">Project Manager</p>
+            </div>
           </div>
         </div>
       </div>
@@ -198,7 +208,7 @@
       function moveNextCarousel() {
         var elems = document.querySelector('.carousel.carousel-slider');
         var moveRight = M.Carousel.getInstance(elems);
-        moveRight.next(1);
+        moveRight.next();
       }
 
       document.addEventListener('DOMContentLoaded', function() {
@@ -208,9 +218,9 @@
         var instances2 = M.Sidenav.init(elems2, {});
         var elems3 = document.querySelectorAll('.carousel');
         var instances3 = M.Carousel.init(elems3, {'fullWidth':'true', 'indicators':'true'});
-        setTimeout(() => {
+          setInterval(() => {
           moveNextCarousel();
-        }, 2000);
+          }, 2000);
       });
     </script>
   </body>
