@@ -10,6 +10,7 @@
       <link type="text/css" rel="stylesheet" href="css/global.css"/>
       <link type="text/css" rel="stylesheet" href="css/sso.css"/>
       <title>Erudite - Login</title>
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
 
     <body class="bg-hijau">
@@ -61,7 +62,8 @@
                                 <input id="password" type="password" class="validate" required>
                                 <label for="password">Password</label>
                             </div>
-                            <button type="submit" class="waves-effect waves-light btn">Login</button>
+                            <div class="g-recaptcha" data-sitekey="6LdXdvwUAAAAAOnPAR5qxacp1Q29yq9b8G3eTq4u"></div>
+                            <button type="submit" class="waves-effect waves-light btn" style="margin-top: 10px;">Login</button>
                             </form>
                             <p class="font-fira" style="margin-top: 20px;">Don't have an account? <a href="sso.html">Sign up here.</a></p>
                         </div>
