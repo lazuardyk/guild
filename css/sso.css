@@ -17,9 +17,6 @@
     }
   }
 
-html, body, .container {
-    height: 100%;
-}
 
 .tombol-fb {
     border: solid 2px blue;
