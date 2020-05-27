@@ -1,0 +1,34 @@
+@font-face {
+    font-family: "MaisonNeue-Book";
+    src: url(../fonts/MaisonNeueTRIAL-Book.otf);
+    }
+
+@font-face {
+    font-family: "MaisonNeueExtended-Bold";
+    src: url(../fonts/MaisonNeueExtendedTRIAL-Bold.otf);
+    }
+
+@font-face {
+font-family: "MaisonNeue-Demi";
+src: url(../fonts/MaisonNeueExtendedTRIAL-Demi.otf);
+}
+
+.font-book {
+    font-family: 'MaisonNeue-Book';
+}
+
+.font-bold {
+    font-family: 'MaisonNeueExtended-Bold';
+}
+
+.font-demi {
+    font-family: 'MaisonNeue-Demi';
+}
+
+.vertical-middle {
+    vertical-align: middle;
+}
+
+.card {
+    border-radius: 15px;
+}

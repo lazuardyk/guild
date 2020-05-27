@@ -95,3 +95,7 @@
 .vertical-middle {
     vertical-align: middle;
 }
+
+.row1 {
+    min-height: 100vh !important;
+}
